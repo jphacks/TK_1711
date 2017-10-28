@@ -22,14 +22,14 @@ class Api::V1::ContainersController < Api::V1::BaseController
         status = params[:status].to_i
 
         if @container.status == status 
-            # 3ならばそのままで放置。
+            # 2ならばそのままで放置。
             puts "This is already finished"
-        elsif status == 3
+        elsif status == 2
             @container.delivery_date = delivery_date
             @container.duration = duration
             @container.status = status
 
-            # Status 3になったときに契約書を参照する。
+            # Status 2になったときに契約書を参照する。
 
             @payment = @container.payment
 
