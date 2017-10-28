@@ -20,7 +20,7 @@ class DeliveryListViewController: UIViewController {
     }
     private var balance: Int = 0 {
         didSet {
-            balanceLabel.text = "所有金 " + String(balance) + "円"
+            balanceLabel.text = "所有金 " + String(balance / 30000) + "ether"
         }
     }
     var refreshControl: UIRefreshControl?
@@ -98,6 +98,7 @@ extension DeliveryListViewController: UITableViewDataSource {
 extension DeliveryListViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         performSegue(withIdentifier: "showDetail", sender: nil)
     }
 
