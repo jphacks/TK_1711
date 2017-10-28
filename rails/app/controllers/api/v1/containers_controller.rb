@@ -23,7 +23,13 @@ class Api::V1::ContainersController < Api::V1::BaseController
             delivery_date = params[:date]
         end
         duration = params[:duration].to_i
-        status = params[:status].to_i
+        # status = params[:status].to_i
+
+        if params[:status].nil?
+            status = @container.status
+        else
+            status = params[:status].to_i
+        end
 
         if @container.status == status 
             # 2ならばそのままで放置。
