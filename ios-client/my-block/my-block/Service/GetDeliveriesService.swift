@@ -9,7 +9,7 @@
 import Foundation
 
 class GetDeliveriesService: MyBlockEndpoint {
-    var path: String { return "container" }
+    var path: String { return "containers" }
     typealias ResponseType = GetDeliveriesResult
 }
 

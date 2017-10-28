@@ -43,6 +43,17 @@ class DeliveryListViewController: UIViewController {
         }
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.destination {
+        case let c as DeliveryDetailViewController:
+            guard let indexPath = deliveryListTableView.indexPathForSelectedRow else { break }
+            let delivery = deliveries[indexPath.row]
+            c.delivery = delivery
+        default:
+            break
+        }
+    }
+
 }
 
 extension DeliveryListViewController: UITableViewDataSource {
@@ -55,17 +66,6 @@ extension DeliveryListViewController: UITableViewDataSource {
         let cell = deliveryListTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = deliveries[indexPath.row].name
         return cell
-    }
-
-}
-
-extension DeliveryListViewController: UITableViewDelegate {
-
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "DeliveryDetail") as! DeliveryDetailViewController
-        vc.delivery = deliveries[indexPath.row]
-        navigationController?.pushViewController(vc, animated: true)
     }
 
 }
