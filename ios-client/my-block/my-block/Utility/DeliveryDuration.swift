@@ -24,3 +24,12 @@ func deliveryDuration(for integer: Int) -> String {
     default: return ""
     }
 }
+
+func allDeliveryDurations() -> [String] {
+    var durations: [String] = []
+    durations.append(DeliveryDuration.morning.rawValue)
+    durations.append(DeliveryDuration.daytime.rawValue)
+    durations.append(DeliveryDuration.evening.rawValue)
+    durations.append(DeliveryDuration.night.rawValue)
+    return durations
+}

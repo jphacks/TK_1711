@@ -19,4 +19,10 @@ extension Date {
         return yearStr + monthStr + dayStr
     }
 
+    func toShortString() -> String {
+        let components = Calendar.current.dateComponents([.month, .day], from: self)
+        guard let month = components.month, let day = components.day else { return "" }
+        return String(month) + "/" + String(day)
+    }
+
 }

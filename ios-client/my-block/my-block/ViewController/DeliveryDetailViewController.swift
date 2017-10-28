@@ -25,7 +25,6 @@ class DeliveryDetailViewController: UIViewController {
     @IBOutlet private weak var dateLabel: UILabel!
     @IBOutlet private weak var statusLabel: UILabel!
     @IBOutlet private weak var datePickerView: UIPickerView!
-    @IBOutlet private weak var durationPickerView: UIPickerView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,15 +39,23 @@ class DeliveryDetailViewController: UIViewController {
 extension DeliveryDetailViewController: UIPickerViewDataSource, UIPickerViewDelegate {
 
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
+        return 2
     }
 
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return dates.count
+        switch component {
+        case 0: return dates.count
+        case 1: return allDeliveryDurations().count
+        default: return 0
+        }
     }
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return dates[row].toString()
+        switch component {
+        case 0: return dates[row].toShortString()
+        case 1: return allDeliveryDurations()[row]
+        default: return nil
+        }
     }
 
 }

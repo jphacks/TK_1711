@@ -119,31 +119,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="S7H-Sm-GvL">
-                                <rect key="frame" x="0.0" y="279.5" width="375" height="371.5"/>
-                                <subviews>
-                                    <pickerView contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="XDo-fA-xiq">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="184"/>
-                                        <color key="backgroundColor" red="0.85378707060000003" green="0.86322176399999995" blue="0.85789790639999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <connections>
-                                            <outlet property="dataSource" destination="ZZB-Qw-TFe" id="5ct-2B-YbH"/>
-                                            <outlet property="delegate" destination="ZZB-Qw-TFe" id="Hzp-cd-eu8"/>
-                                        </connections>
-                                    </pickerView>
-                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4gx-Sf-3JL">
-                                        <rect key="frame" x="0.0" y="189" width="375" height="183"/>
-                                        <color key="backgroundColor" red="0.85378707060000003" green="0.86322176399999995" blue="0.85789790639999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <connections>
-                                            <outlet property="dataSource" destination="ZZB-Qw-TFe" id="cHe-BG-opi"/>
-                                            <outlet property="delegate" destination="ZZB-Qw-TFe" id="Bfg-CW-EGY"/>
-                                        </connections>
-                                    </pickerView>
-                                </subviews>
-                            </stackView>
+                            <pickerView contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="XDo-fA-xiq">
+                                <rect key="frame" x="16" y="280" width="343" height="216"/>
+                                <color key="backgroundColor" red="0.85378707060000003" green="0.86322176399999995" blue="0.85789790639999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="ZZB-Qw-TFe" id="5ct-2B-YbH"/>
+                                    <outlet property="delegate" destination="ZZB-Qw-TFe" id="Hzp-cd-eu8"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="S7H-Sm-GvL" firstAttribute="leading" secondItem="aEl-Ic-oqr" secondAttribute="leading" id="2cX-2O-nph"/>
+                            <constraint firstItem="XDo-fA-xiq" firstAttribute="leading" secondItem="aEl-Ic-oqr" secondAttribute="leading" constant="16" id="77c-hb-EKj"/>
                             <constraint firstItem="lxl-aE-RNE" firstAttribute="leading" secondItem="aEl-Ic-oqr" secondAttribute="leading" constant="32" id="8bL-Au-SzF"/>
                             <constraint firstItem="aEl-Ic-oqr" firstAttribute="trailing" secondItem="Bfr-xb-1TN" secondAttribute="trailing" constant="16" id="BQk-CS-V9c"/>
                             <constraint firstItem="tka-kP-F0b" firstAttribute="leading" secondItem="aEl-Ic-oqr" secondAttribute="leading" constant="32" id="DQh-pY-8UL"/>
@@ -157,21 +144,19 @@
                             <constraint firstItem="aEl-Ic-oqr" firstAttribute="trailing" secondItem="FoL-oS-6nO" secondAttribute="trailing" constant="16" id="ays-19-Pxc"/>
                             <constraint firstItem="tka-kP-F0b" firstAttribute="top" secondItem="237-Gv-o2R" secondAttribute="bottom" constant="4" id="cWg-j2-muR"/>
                             <constraint firstItem="aEl-Ic-oqr" firstAttribute="trailing" secondItem="237-Gv-o2R" secondAttribute="trailing" constant="16" id="edr-Rs-xen"/>
-                            <constraint firstItem="S7H-Sm-GvL" firstAttribute="top" secondItem="FoL-oS-6nO" secondAttribute="bottom" constant="4" id="k0f-yr-mzk"/>
+                            <constraint firstItem="XDo-fA-xiq" firstAttribute="top" secondItem="FoL-oS-6nO" secondAttribute="bottom" constant="4" id="fQZ-U6-Xkb"/>
                             <constraint firstItem="Bfr-xb-1TN" firstAttribute="top" secondItem="tka-kP-F0b" secondAttribute="bottom" constant="16" id="ljt-am-l0H"/>
-                            <constraint firstAttribute="bottom" secondItem="S7H-Sm-GvL" secondAttribute="bottom" constant="16" id="noX-kc-o0b"/>
                             <constraint firstItem="FoL-oS-6nO" firstAttribute="leading" secondItem="aEl-Ic-oqr" secondAttribute="leading" constant="16" id="qgE-eO-hfG"/>
                             <constraint firstItem="Bfr-xb-1TN" firstAttribute="leading" secondItem="aEl-Ic-oqr" secondAttribute="leading" constant="16" id="qiR-Hq-hzz"/>
                             <constraint firstItem="pVl-of-XbF" firstAttribute="leading" secondItem="aEl-Ic-oqr" secondAttribute="leading" constant="32" id="tbp-KD-TBf"/>
                             <constraint firstItem="pVl-of-XbF" firstAttribute="top" secondItem="lxl-aE-RNE" secondAttribute="bottom" constant="4" id="uNq-dU-SbG"/>
-                            <constraint firstItem="aEl-Ic-oqr" firstAttribute="trailing" secondItem="S7H-Sm-GvL" secondAttribute="trailing" id="xje-OK-NCv"/>
+                            <constraint firstItem="aEl-Ic-oqr" firstAttribute="trailing" secondItem="XDo-fA-xiq" secondAttribute="trailing" constant="16" id="yQr-7q-AWw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aEl-Ic-oqr"/>
                     </view>
                     <connections>
                         <outlet property="dateLabel" destination="lxl-aE-RNE" id="EKt-ed-x4b"/>
                         <outlet property="datePickerView" destination="XDo-fA-xiq" id="zfa-gO-zzS"/>
-                        <outlet property="durationPickerView" destination="4gx-Sf-3JL" id="tPY-N1-beH"/>
                         <outlet property="nameLabel" destination="tka-kP-F0b" id="Vpl-TV-Q1q"/>
                         <outlet property="statusLabel" destination="pVl-of-XbF" id="0Kk-16-YZu"/>
                     </connections>
