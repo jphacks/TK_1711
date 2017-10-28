@@ -49,3 +49,14 @@ extension DeliveryListViewController: UITableViewDataSource {
     }
 
 }
+
+extension DeliveryListViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "DeliveryDetail") as! DeliveryDetailViewController
+        vc.delivery = deliveries[indexPath.row]
+        navigationController?.pushViewController(vc, animated: true)
+    }
+
+}

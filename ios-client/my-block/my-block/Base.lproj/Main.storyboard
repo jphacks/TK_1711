@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--my-block-->
+        <!--配達一覧-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="DeliveryListViewController" customModule="my_block" customModuleProvider="target" sceneMemberID="viewController">
@@ -55,7 +55,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="my-block" id="F4z-u4-bGx"/>
+                    <navigationItem key="navigationItem" title="配達一覧" id="F4z-u4-bGx"/>
                     <connections>
                         <outlet property="deliveryListTableView" destination="uxI-a8-gbY" id="Ujf-h9-BxA"/>
                     </connections>
@@ -63,6 +63,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="456.80000000000001" y="117.39130434782609"/>
+        </scene>
+        <!--Delivery Detail View Controller-->
+        <scene sceneID="3sd-cq-2Oe">
+            <objects>
+                <viewController id="ZZB-Qw-TFe" customClass="DeliveryDetailViewController" customModule="my_block" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eKO-jD-59a">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="商品名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="237-Gv-o2R">
+                                <rect key="frame" x="16" y="36" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tka-kP-F0b">
+                                <rect key="frame" x="16" y="65" width="343" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tka-kP-F0b" firstAttribute="leading" secondItem="aEl-Ic-oqr" secondAttribute="leading" constant="16" id="DQh-pY-8UL"/>
+                            <constraint firstItem="237-Gv-o2R" firstAttribute="top" secondItem="aEl-Ic-oqr" secondAttribute="top" constant="16" id="DfL-gu-saw"/>
+                            <constraint firstItem="237-Gv-o2R" firstAttribute="leading" secondItem="aEl-Ic-oqr" secondAttribute="leading" constant="16" id="Fbc-S3-aAA"/>
+                            <constraint firstItem="aEl-Ic-oqr" firstAttribute="trailing" secondItem="tka-kP-F0b" secondAttribute="trailing" constant="16" id="KUP-yH-vps"/>
+                            <constraint firstItem="tka-kP-F0b" firstAttribute="top" secondItem="237-Gv-o2R" secondAttribute="bottom" constant="8" id="cWg-j2-muR"/>
+                            <constraint firstItem="aEl-Ic-oqr" firstAttribute="trailing" secondItem="237-Gv-o2R" secondAttribute="trailing" constant="16" id="edr-Rs-xen"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aEl-Ic-oqr"/>
+                    </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="tka-kP-F0b" id="Vpl-TV-Q1q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KzI-jt-eWF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1184.8" y="114.69265367316342"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mNb-wS-YEK">
