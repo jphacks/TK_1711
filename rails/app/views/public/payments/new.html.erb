@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<title></title>
+<!--[if lt IE 9]>s
+<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+値段 = 100
+<%= form_for([:public,@payment]) do |f| %>
+  <%= f.label "アドレス(川上：0xe8047fe4612bdaff46ef896cb87fff10a68b52ec)" %>
+  <%= f.text_field :sender%>
+
+  <%= f.label "パスワード(自由)" %>
+  <%= f.password_field "パスワード" %>
+
+  <%= f.label "パスワード確認(自由)" %>
+  <%= f.password_field "パスワード確認用" %>
+  <%= f.submit "Buy!", class: "btn btn-large btn-success" %>
+<% end %>
+</body>
+</html>

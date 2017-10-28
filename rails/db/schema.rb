@@ -24,11 +24,13 @@ ActiveRecord::Schema.define(version: 20171028091841) do
   end
 
   create_table "payments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "container_id"
     t.string   "sender"
-    t.string   "reciever"
+    t.string   "shop"
     t.integer  "mount"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["container_id"], name: "index_payments_on_container_id", using: :btree
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
