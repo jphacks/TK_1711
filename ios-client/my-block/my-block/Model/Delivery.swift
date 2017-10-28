@@ -11,7 +11,8 @@ import Foundation
 class Delivery: JSONDecodable {
     let id: Int
     let name: String
-    let date: Date
+    let purchasedDate: Date
+    let deliveryDate: Date
     let status: DeliveryStatus
     let statusStr: String
     let duration: DeliveryDuration
@@ -30,7 +31,8 @@ class Delivery: JSONDecodable {
         let dateFormatter = DateFormatter()
         dateFormatter.timeZone = TimeZone(identifier: "GMT")
         dateFormatter.dateFormat = "YYYY-MM-dd"
-        date = dateFormatter.date(from: try json.get("date")) ?? Date()
+        purchasedDate = dateFormatter.date(from: try json.get("purchased_date")) ?? Date()
+        deliveryDate = dateFormatter.date(from: try json.get("delivery_date")) ?? Date()
     }
 
 }
