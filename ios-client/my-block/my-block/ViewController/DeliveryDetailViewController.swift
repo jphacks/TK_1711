@@ -83,6 +83,8 @@ class DeliveryDetailViewController: UIViewController {
         case .evening: datePickerView.selectRow(2, inComponent: 1, animated: false)
         case .night: datePickerView.selectRow(3, inComponent: 1, animated: false)
         }
+        guard let days = Calendar.current.dateComponents([.day], from: delivery.purchasedDate, to: delivery.deliveryDate).day else { return }
+        datePickerView.selectRow(days, inComponent: 0, animated: false)
     }
 
 }
