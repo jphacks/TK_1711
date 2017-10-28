@@ -73,10 +73,16 @@ class DeliveryDetailViewController: UIViewController {
     }
 
     func update() {
-        nameLabel.text = delivery?.name
-        statusLabel.text = delivery?.status
-        guard let date = delivery?.date, let durationStr = delivery?.durationStr else { return }
-        dateLabel.text = date.toString() + date.weekdayStr() + " " + durationStr
+        guard let delivery = delivery else { return }
+        nameLabel.text = delivery.name
+        statusLabel.text = delivery.status
+        dateLabel.text = delivery.date.toString() + delivery.date.weekdayStr() + " " + delivery.durationStr
+        switch delivery.duration {
+        case .morning: datePickerView.selectRow(0, inComponent: 1, animated: false)
+        case .daytime: datePickerView.selectRow(1, inComponent: 1, animated: false)
+        case .evening: datePickerView.selectRow(2, inComponent: 1, animated: false)
+        case .night: datePickerView.selectRow(3, inComponent: 1, animated: false)
+        }
     }
 
 }

@@ -20,10 +20,14 @@ class DeliveryListViewController: UIViewController {
     }
     private var balance: Int = 0 {
         didSet {
-            balanceLabel.text = "所有金: " + String(balance) + "円"
+            balanceLabel.text = "所有金 " + String(balance) + "円"
         }
     }
     var refreshControl: UIRefreshControl?
+
+    @IBAction func logoutButtonTapped() {
+        dismiss(animated: true, completion: nil)
+    }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -36,6 +40,10 @@ class DeliveryListViewController: UIViewController {
         refreshControl?.addTarget(self, action: #selector(getDeliveries), for: .valueChanged)
         deliveryListTableView.addSubview(refreshControl!)
         deliveryListTableView.register(UINib(nibName: "DeliveryTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
+        navigationController?.navigationBar.titleTextAttributes = [
+            .font: UIFont(name: "SF UI Text", size: 20)!,
+            .foregroundColor: UIColor.white
+        ]
     }
 
     @objc func getDeliveries() {
