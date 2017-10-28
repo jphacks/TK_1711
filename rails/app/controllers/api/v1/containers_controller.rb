@@ -17,30 +17,17 @@ class Api::V1::ContainersController < Api::V1::BaseController
 
     def update
         @container = Container.find(params[:id])
-        if params[:date].nil? 
-            delivery_date = @container.delivery_date
-        else
-            delivery_date = params[:date]
-        end
-        duration = params[:duration].to_i
-        # status = params[:status].to_i
 
-        if params[:status].nil?
-            status = @container.status
-        else
-            status = params[:status].to_i
-        end
+        duration = params[:duration]
+        delivery_date = params[:date]
 
-        if @container.status == status 
-            # 2ならばそのままで放置。
-            puts "This is already finished"
-        elsif status == 2
-            @container.delivery_date = delivery_date
-            @container.duration = duration
-            @container.status = status
+        @container.delivery_date = delivery_date
+        @container.duration = duration
 
-            # Status 2になったときに契約書を参照する。
-
+        if @container.status == 2
+            # そもそも2だったらスルー
+        elsif params[:status] == 2
+            # ２じゃなかったけど、これから2になるやつ
             @payment = @container.payment
 
             sender_addr = @payment.sender
@@ -54,18 +41,13 @@ class Api::V1::ContainersController < Api::V1::BaseController
             @sender.save
             @shop.save
         else
-            # 従来が3以外で、params[：id]が３ではないときは更新。
-            @container.delivery_date = delivery_date
-            @container.duration = duration
-            @container.status = status
-        end
+            # 2じゃなかったし、これから2にもならないやつ
+        end 
 
-        if @container.save
-            render :json => @container.to_json
-        else
-            error = {error:"error"}
-            render :json => error.to_json
-        end
+        @container.status = ( params[:status].nil? ?  @container.status : params[:status])
+
+        @container.save
+        render :json => @container.to_json
     end
     
     def new
