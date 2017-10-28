@@ -37,7 +37,8 @@ class DeliveryDetailViewController: UIViewController {
             switch result {
             case .success(let res):
                 DispatchQueue.main.async {
-                    self.dateLabel.text = res.date.toString() + res.date.weekdayStr() + " " + res.durationStr
+                    self.delivery = res
+                    self.update()
                 }
             case .failure(let err):
                 print(err)
@@ -47,6 +48,31 @@ class DeliveryDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        update()
+        addReloadButton()
+    }
+
+    private func addReloadButton() {
+        let item = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(reload))
+        navigationItem.setRightBarButton(item, animated: false)
+    }
+
+    @objc func reload() {
+        guard let id = delivery?.id else { return }
+        GetDeliveryService(id: id).request(URLSession.shared) { result in
+            switch result {
+            case .success(let res):
+                DispatchQueue.main.async {
+                    self.delivery = res
+                    self.update()
+                }
+            case .failure(let err):
+                print(err)
+            }
+        }
+    }
+
+    func update() {
         nameLabel.text = delivery?.name
         statusLabel.text = delivery?.status
         guard let date = delivery?.date, let durationStr = delivery?.durationStr else { return }
