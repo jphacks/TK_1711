@@ -15,12 +15,13 @@ ActiveRecord::Schema.define(version: 20171028091841) do
   create_table "containers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "user_id"
     t.string   "name"
-    t.string   "date"
+    t.string   "delivery_date"
+    t.string   "purchase_date"
     t.string   "photo"
     t.integer  "duration"
     t.integer  "status"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
     t.index ["user_id"], name: "index_containers_on_user_id", using: :btree
   end
 
