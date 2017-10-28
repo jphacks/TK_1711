@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		572E9F401FA4A4F800E7C778 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572E9F3F1FA4A4F800E7C778 /* LoginViewController.swift */; };
 		57E1ABC61FA427E4000CB949 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E1ABC51FA427E4000CB949 /* AppDelegate.swift */; };
 		57E1ABCB1FA427E4000CB949 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57E1ABC91FA427E4000CB949 /* Main.storyboard */; };
 		57E1ABCE1FA427E4000CB949 /* my_block.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 57E1ABCC1FA427E4000CB949 /* my_block.xcdatamodeld */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		572E9F3F1FA4A4F800E7C778 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		57E1ABC21FA427E4000CB949 /* my-block.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "my-block.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57E1ABC51FA427E4000CB949 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57E1ABCA1FA427E4000CB949 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			children = (
 				57E1ABDA1FA428BC000CB949 /* DeliveryListViewController.swift */,
 				57E1ABE91FA434C4000CB949 /* DeliveryDetailViewController.swift */,
+				572E9F3F1FA4A4F800E7C778 /* LoginViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 				57E1ABEA1FA434C4000CB949 /* DeliveryDetailViewController.swift in Sources */,
 				57E1ABF11FA47485000CB949 /* Date+Extension.swift in Sources */,
 				57E1ABF51FA4982F000CB949 /* UpdateDeliveryDateService.swift in Sources */,
+				572E9F401FA4A4F800E7C778 /* LoginViewController.swift in Sources */,
 				57E1ABE11FA42B44000CB949 /* JSONObject.swift in Sources */,
 				57E1ABEF1FA46CAD000CB949 /* DeliveryDuration.swift in Sources */,
 				57E1ABDF1FA42AFD000CB949 /* Delivery.swift in Sources */,
