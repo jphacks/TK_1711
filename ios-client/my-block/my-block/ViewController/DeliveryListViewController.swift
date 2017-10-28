@@ -10,6 +10,7 @@ import UIKit
 
 class DeliveryListViewController: UIViewController {
 
+    @IBOutlet private weak var balanceLabel: UILabel!
     @IBOutlet private weak var deliveryListTableView: UITableView!
 
     private var deliveries: [Delivery] = [] {
@@ -17,7 +18,11 @@ class DeliveryListViewController: UIViewController {
             deliveryListTableView.reloadData()
         }
     }
-    private var balance: Int = 0
+    private var balance: Int = 0 {
+        didSet {
+            balanceLabel.text = "所有金: " + String(balance) + "円"
+        }
+    }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
