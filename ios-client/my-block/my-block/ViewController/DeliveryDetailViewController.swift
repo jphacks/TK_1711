@@ -16,11 +16,11 @@ class DeliveryDetailViewController: UIViewController {
         let maxDays = 5
         var dates: [Date] = []
         for index in 0..<maxDays {
-            dates.append(delivery.date.addingTimeInterval(TimeInterval(60 * 60 * 24 * index)))
+            dates.append(delivery.purchasedDate.addingTimeInterval(TimeInterval(60 * 60 * 24 * index)))
         }
         return dates
     }
-    lazy var shownDate = delivery?.date
+    lazy var shownDate = delivery?.purchasedDate
     lazy var shownRewards = rewards(for: shownDate?.weekday() ?? 1)
 
     @IBOutlet private weak var nameLabel: UILabel!
@@ -76,7 +76,7 @@ class DeliveryDetailViewController: UIViewController {
         guard let delivery = delivery else { return }
         nameLabel.text = delivery.name
         statusLabel.text = delivery.statusStr
-        dateLabel.text = delivery.date.toString() + delivery.date.weekdayStr() + " " + delivery.durationStr
+        dateLabel.text = delivery.deliveryDate.toString() + delivery.deliveryDate.weekdayStr() + " " + delivery.durationStr
         switch delivery.duration {
         case .morning: datePickerView.selectRow(0, inComponent: 1, animated: false)
         case .daytime: datePickerView.selectRow(1, inComponent: 1, animated: false)
