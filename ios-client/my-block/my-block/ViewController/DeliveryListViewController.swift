@@ -17,6 +17,7 @@ class DeliveryListViewController: UIViewController {
             deliveryListTableView.reloadData()
         }
     }
+    private var balance: Int = 0
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -37,6 +38,7 @@ class DeliveryListViewController: UIViewController {
             case .success(let res):
                 DispatchQueue.main.async {
                     self.deliveries = res.deliveries
+                    self.balance = res.balance
                 }
             case .failure(let err):
                 print(err)
