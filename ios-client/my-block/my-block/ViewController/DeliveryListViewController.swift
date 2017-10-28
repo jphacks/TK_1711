@@ -20,18 +20,27 @@ class DeliveryListViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        GetDeliveriesService().request(URLSession.shared) { result in
-            switch result {
-            case .success(let res):
-                self.deliveries = res.deliveries
-            case .failure(let err):
-                print(err)
-            }
-        }
+        getDeliveries()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(getDeliveries), for: .valueChanged)
+        deliveryListTableView.addSubview(refreshControl)
+    }
+
+    @objc func getDeliveries() {
+        GetDeliveriesService().request(URLSession.shared) { result in
+            switch result {
+            case .success(let res):
+                DispatchQueue.main.async {
+                    self.deliveries = res.deliveries
+                }
+            case .failure(let err):
+                print(err)
+            }
+        }
     }
 
 }
