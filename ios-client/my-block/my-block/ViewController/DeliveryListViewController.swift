@@ -40,6 +40,10 @@ class DeliveryListViewController: UIViewController {
         refreshControl?.addTarget(self, action: #selector(getDeliveries), for: .valueChanged)
         deliveryListTableView.addSubview(refreshControl!)
         deliveryListTableView.register(UINib(nibName: "DeliveryTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
+        navigationController?.navigationBar.titleTextAttributes = [
+            .font: UIFont(name: "SF UI Text", size: 20)!,
+            .foregroundColor: UIColor.white
+        ]
     }
 
     @objc func getDeliveries() {
