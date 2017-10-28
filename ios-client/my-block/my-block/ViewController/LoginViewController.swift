@@ -20,6 +20,8 @@ class LoginViewController: UIViewController {
         guard let id = Int(userId) else { return }
         UserDefaults.standard.set(id, forKey: "userId")
         performSegue(withIdentifier: "login", sender: nil)
+        userIdTextField.text = nil
+        passwordTextField.text = nil
     }
 
     override func viewDidLoad() {

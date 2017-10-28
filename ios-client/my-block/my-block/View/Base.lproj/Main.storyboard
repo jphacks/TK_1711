@@ -54,7 +54,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="配達一覧" id="F4z-u4-bGx"/>
+                    <navigationItem key="navigationItem" title="配達一覧" id="F4z-u4-bGx">
+                        <barButtonItem key="rightBarButtonItem" title="ログアウト" id="EKo-2T-jfp">
+                            <connections>
+                                <action selector="logoutButtonTapped" destination="BYZ-38-t0r" id="3mG-yg-4mr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="balanceLabel" destination="YMF-Ja-wIC" id="HL4-df-RfY"/>
                         <outlet property="deliveryListTableView" destination="uxI-a8-gbY" id="Ujf-h9-BxA"/>

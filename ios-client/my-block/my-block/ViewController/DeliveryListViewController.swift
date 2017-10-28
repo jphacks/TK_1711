@@ -25,6 +25,10 @@ class DeliveryListViewController: UIViewController {
     }
     var refreshControl: UIRefreshControl?
 
+    @IBAction func logoutButtonTapped() {
+        dismiss(animated: true, completion: nil)
+    }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         getDeliveries()
