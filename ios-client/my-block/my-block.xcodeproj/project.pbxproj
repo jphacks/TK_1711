@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		572E9F401FA4A4F800E7C778 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572E9F3F1FA4A4F800E7C778 /* LoginViewController.swift */; };
+		572E9F441FA4C13700E7C778 /* DeliveryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572E9F421FA4C13700E7C778 /* DeliveryTableViewCell.swift */; };
+		572E9F451FA4C13700E7C778 /* DeliveryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 572E9F431FA4C13700E7C778 /* DeliveryTableViewCell.xib */; };
 		57E1ABC61FA427E4000CB949 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E1ABC51FA427E4000CB949 /* AppDelegate.swift */; };
 		57E1ABCB1FA427E4000CB949 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57E1ABC91FA427E4000CB949 /* Main.storyboard */; };
 		57E1ABCE1FA427E4000CB949 /* my_block.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 57E1ABCC1FA427E4000CB949 /* my_block.xcdatamodeld */; };
@@ -30,6 +32,8 @@
 
 /* Begin PBXFileReference section */
 		572E9F3F1FA4A4F800E7C778 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		572E9F421FA4C13700E7C778 /* DeliveryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryTableViewCell.swift; sourceTree = "<group>"; };
+		572E9F431FA4C13700E7C778 /* DeliveryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryTableViewCell.xib; sourceTree = "<group>"; };
 		57E1ABC21FA427E4000CB949 /* my-block.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "my-block.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57E1ABC51FA427E4000CB949 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57E1ABCA1FA427E4000CB949 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -68,6 +72,8 @@
 			children = (
 				57E1ABD11FA427E4000CB949 /* LaunchScreen.storyboard */,
 				57E1ABC91FA427E4000CB949 /* Main.storyboard */,
+				572E9F421FA4C13700E7C778 /* DeliveryTableViewCell.swift */,
+				572E9F431FA4C13700E7C778 /* DeliveryTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -206,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				57E1ABD31FA427E4000CB949 /* LaunchScreen.storyboard in Resources */,
+				572E9F451FA4C13700E7C778 /* DeliveryTableViewCell.xib in Resources */,
 				57E1ABD01FA427E4000CB949 /* Assets.xcassets in Resources */,
 				57E1ABCB1FA427E4000CB949 /* Main.storyboard in Resources */,
 			);
@@ -222,6 +229,7 @@
 				57E1ABE81FA42DA9000CB949 /* APIEndpoint.swift in Sources */,
 				57E1ABCE1FA427E4000CB949 /* my_block.xcdatamodeld in Sources */,
 				57E1ABF71FA4A12F000CB949 /* GetDeliveryService.swift in Sources */,
+				572E9F441FA4C13700E7C778 /* DeliveryTableViewCell.swift in Sources */,
 				57E1ABF31FA4878F000CB949 /* DeliveryReward.swift in Sources */,
 				57E1ABED1FA46909000CB949 /* DeliveryStatus.swift in Sources */,
 				57E1ABE61FA42D73000CB949 /* MyBlockEndpoint.swift in Sources */,

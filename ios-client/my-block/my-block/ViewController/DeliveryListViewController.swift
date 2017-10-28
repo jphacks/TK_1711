@@ -34,6 +34,7 @@ class DeliveryListViewController: UIViewController {
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(getDeliveries), for: .valueChanged)
         deliveryListTableView.addSubview(refreshControl)
+        deliveryListTableView.register(UINib(nibName: "DeliveryTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
     }
 
     @objc func getDeliveries() {
@@ -71,8 +72,9 @@ extension DeliveryListViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = deliveryListTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = deliveries[indexPath.row].name
+        let cell = deliveryListTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! DeliveryTableViewCell
+        let delivery = deliveries[indexPath.row]
+        cell.configure(delivery)
         return cell
     }
 
