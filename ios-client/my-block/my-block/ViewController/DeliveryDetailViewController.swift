@@ -32,7 +32,7 @@ class DeliveryDetailViewController: UIViewController {
         guard let id = delivery?.id else { return }
         guard let date = shownDate else { return }
         let index = datePickerView.selectedRow(inComponent: 1)
-        let reward = shownRewards[index]
+//        let reward = shownRewards[index]
         UpdateDeliveryDateService(deliveryId: id, newDate: date.toQueryString(), newDuration: index).request(URLSession.shared) { result in
             switch result {
             case .success(let res):
@@ -83,6 +83,8 @@ class DeliveryDetailViewController: UIViewController {
         case .evening: datePickerView.selectRow(2, inComponent: 1, animated: false)
         case .night: datePickerView.selectRow(3, inComponent: 1, animated: false)
         }
+        guard let days = Calendar.current.dateComponents([.day], from: delivery.purchasedDate, to: delivery.deliveryDate).day else { return }
+        datePickerView.selectRow(days, inComponent: 0, animated: false)
     }
 
 }
