@@ -8,5 +8,7 @@
 
 
 for num in 1..10 do
-    containers = Container.create(name:"林さん",date:"20171020",status:0)
+    duration = rand(0..3)
+    status = rand(0..2)
+    containers = Container.create(name:"林さん",date:"2017-10-20",duration:duration,status:status)
 end
