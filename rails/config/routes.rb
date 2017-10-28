@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
     namespace :api do
         namespace :v1 do
-            get '/container', to:'containers#index'
+            resources :containers
         end
-    end  
+    end
+    
+    namespace :public do
+        get '/store', to:'stores#index'
+    end
 end
