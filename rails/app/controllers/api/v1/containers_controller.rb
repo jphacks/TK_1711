@@ -17,11 +17,11 @@ class Api::V1::ContainersController < Api::V1::BaseController
 
     def update
         @container = Container.find(params[:id])
-        date = params[:date]
+        delivery_date = params[:date]
         duration = params[:duration].to_i
         status = params[:status].to_i
 
-        @container.date = date
+        @container.delivery_date = delivery_date
         @container.duration = duration
         @container.status = status
 
