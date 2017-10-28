@@ -15,6 +15,7 @@ class Delivery: JSONDecodable {
     let status: String
     let duration: DeliveryDuration
     let durationStr: String
+    let photoUrl: URL
 
     required init(json: JSONObject) throws {
         id = try json.get("id")
@@ -22,6 +23,7 @@ class Delivery: JSONDecodable {
         status = deliveryStatus(for: try json.get("status"))
         durationStr = deliveryDurationStr(for: try json.get("duration"))
         duration = deliveryDuration(for: try json.get("duration"))
+        photoUrl = try json.get("photo")
 
         let dateFormatter = DateFormatter()
         dateFormatter.timeZone = TimeZone(identifier: "GMT")

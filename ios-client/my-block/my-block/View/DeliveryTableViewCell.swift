@@ -21,6 +21,7 @@ class DeliveryTableViewCell: UITableViewCell {
     func configure(_ delivery: Delivery) {
         nameLabel.text = delivery.name
         dateLabel.text = "配達予定日 " + delivery.date.toString() + delivery.date.weekdayStr()
+        photoImageView.load(from: delivery.photoUrl)
     }
 
 }

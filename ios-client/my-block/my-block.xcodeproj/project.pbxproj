@@ -10,6 +10,7 @@
 		572E9F401FA4A4F800E7C778 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572E9F3F1FA4A4F800E7C778 /* LoginViewController.swift */; };
 		572E9F441FA4C13700E7C778 /* DeliveryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572E9F421FA4C13700E7C778 /* DeliveryTableViewCell.swift */; };
 		572E9F451FA4C13700E7C778 /* DeliveryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 572E9F431FA4C13700E7C778 /* DeliveryTableViewCell.xib */; };
+		572E9F471FA4C9EA00E7C778 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572E9F461FA4C9EA00E7C778 /* UIImageView+Extension.swift */; };
 		57E1ABC61FA427E4000CB949 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E1ABC51FA427E4000CB949 /* AppDelegate.swift */; };
 		57E1ABCB1FA427E4000CB949 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57E1ABC91FA427E4000CB949 /* Main.storyboard */; };
 		57E1ABCE1FA427E4000CB949 /* my_block.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 57E1ABCC1FA427E4000CB949 /* my_block.xcdatamodeld */; };
@@ -34,6 +35,7 @@
 		572E9F3F1FA4A4F800E7C778 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		572E9F421FA4C13700E7C778 /* DeliveryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryTableViewCell.swift; sourceTree = "<group>"; };
 		572E9F431FA4C13700E7C778 /* DeliveryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryTableViewCell.xib; sourceTree = "<group>"; };
+		572E9F461FA4C9EA00E7C778 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		57E1ABC21FA427E4000CB949 /* my-block.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "my-block.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57E1ABC51FA427E4000CB949 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57E1ABCA1FA427E4000CB949 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				57E1ABEE1FA46CAD000CB949 /* DeliveryDuration.swift */,
 				57E1ABF01FA47485000CB949 /* Date+Extension.swift */,
 				57E1ABF21FA4878F000CB949 /* DeliveryReward.swift */,
+				572E9F461FA4C9EA00E7C778 /* UIImageView+Extension.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				57E1ABC61FA427E4000CB949 /* AppDelegate.swift in Sources */,
 				57E1ABEA1FA434C4000CB949 /* DeliveryDetailViewController.swift in Sources */,
 				57E1ABF11FA47485000CB949 /* Date+Extension.swift in Sources */,
+				572E9F471FA4C9EA00E7C778 /* UIImageView+Extension.swift in Sources */,
 				57E1ABF51FA4982F000CB949 /* UpdateDeliveryDateService.swift in Sources */,
 				572E9F401FA4A4F800E7C778 /* LoginViewController.swift in Sources */,
 				57E1ABE11FA42B44000CB949 /* JSONObject.swift in Sources */,
