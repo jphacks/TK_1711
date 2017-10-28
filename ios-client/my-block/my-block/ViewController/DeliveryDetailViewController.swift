@@ -75,7 +75,7 @@ class DeliveryDetailViewController: UIViewController {
     func update() {
         guard let delivery = delivery else { return }
         nameLabel.text = delivery.name
-        statusLabel.text = delivery.status
+        statusLabel.text = delivery.statusStr
         dateLabel.text = delivery.date.toString() + delivery.date.weekdayStr() + " " + delivery.durationStr
         switch delivery.duration {
         case .morning: datePickerView.selectRow(0, inComponent: 1, animated: false)

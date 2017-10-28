@@ -12,7 +12,8 @@ class Delivery: JSONDecodable {
     let id: Int
     let name: String
     let date: Date
-    let status: String
+    let status: DeliveryStatus
+    let statusStr: String
     let duration: DeliveryDuration
     let durationStr: String
     let photoUrl: URL
@@ -21,6 +22,7 @@ class Delivery: JSONDecodable {
         id = try json.get("id")
         name = try json.get("name")
         status = deliveryStatus(for: try json.get("status"))
+        statusStr = deliveryStatusStr(for: try json.get("status"))
         durationStr = deliveryDurationStr(for: try json.get("duration"))
         duration = deliveryDuration(for: try json.get("duration"))
         photoUrl = try json.get("photo")
