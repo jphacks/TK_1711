@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<title></title>
+<!--[if lt IE 9]>s
+<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+<%= form_for([:public,@payment]) do |f| %>
+  <%= f.label "アドレス" %>
+  <%= f.text_field :sender%>
+
+  <%= f.label "パスワード" %>
+  <%= f.password_field "パスワード" %>
+
+  <%= f.label "パスワード確認" %>
+  <%= f.password_field "パスワード確認用" %>
+  <%= f.submit "Create my account", class: "btn btn-large btn-success" %>
+<% end %>
+</body>
+</html>

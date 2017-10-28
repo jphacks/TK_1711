@@ -1,7 +1,9 @@
 class Api::V1::ContainersController < Api::V1::BaseController
 
     def index
-        @containers = {"container":Container.all}
+        @user = User.find(params[:id])
+        @containers = @user.containers
+        @containers = {"container":@containers,"balance":@user.balance}
         render :json => @containers.to_json
     end
 
@@ -24,12 +26,11 @@ class Api::V1::ContainersController < Api::V1::BaseController
         @container.status = status
 
         if @container.save
-            p "Update"
+            render :json => @container.to_json
         else
-            p "Failed"
+            error = {error:"error"}
+            render :json => error.to_json
         end
-        error = {hello:0}
-        render :json => error.to_json
     end
     
     def new
