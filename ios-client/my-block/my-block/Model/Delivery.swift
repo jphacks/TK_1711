@@ -24,6 +24,7 @@ class Delivery: JSONDecodable {
         duration = deliveryDuration(for: try json.get("duration"))
 
         let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = TimeZone(identifier: "GMT")
         dateFormatter.dateFormat = "YYYY-MM-dd"
         date = dateFormatter.date(from: try json.get("date")) ?? Date()
     }

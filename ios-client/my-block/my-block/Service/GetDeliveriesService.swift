@@ -8,7 +8,7 @@
 
 import Foundation
 
-class GetDeliveriesService: MyBlockEndpoint {
+struct GetDeliveriesService: MyBlockEndpoint {
     var path: String { return "containers" }
     typealias ResponseType = GetDeliveriesResult
 }

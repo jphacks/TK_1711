@@ -29,7 +29,20 @@ class DeliveryDetailViewController: UIViewController {
     @IBOutlet private weak var datePickerView: UIPickerView!
 
     @IBAction private func changeDate() {
-        
+        guard let id = delivery?.id else { return }
+        guard let date = shownDate else { return }
+        let index = datePickerView.selectedRow(inComponent: 1)
+        let reward = shownRewards[index]
+        UpdateDeliveryDateService(deliveryId: id, newDate: date.toQueryString(), newDuration: index).request(URLSession.shared) { result in
+            switch result {
+            case .success(let res):
+                DispatchQueue.main.async {
+                    self.dateLabel.text = res.date.toString() + res.date.weekdayStr() + " " + res.durationStr
+                }
+            case .failure(let err):
+                print(err)
+            }
+        }
     }
 
     override func viewDidLoad() {
@@ -66,6 +79,7 @@ extension DeliveryDetailViewController: UIPickerViewDataSource, UIPickerViewDele
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         guard component == 0 else { return }
+        shownDate = dates[row]
         shownRewards = rewards(for: dates[row].weekday())
         pickerView.reloadComponent(1)
     }

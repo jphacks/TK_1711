@@ -25,6 +25,15 @@ extension Date {
         return String(month) + "/" + String(day)
     }
 
+    func toQueryString() -> String {
+        let components = Calendar.current.dateComponents([.year, .month, .day], from: self)
+        guard let year = components.year, let month = components.month, let day = components.day else { return "" }
+        let yearStr = String(describing: year) + "-"
+        let monthStr = String(describing: month) + "-"
+        let dayStr = String(describing: day)
+        return yearStr + monthStr + dayStr
+    }
+
     func weekday() -> Int {
         return Calendar.current.component(.weekday, from: self)
     }
