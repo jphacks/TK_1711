@@ -15,13 +15,23 @@ enum DeliveryDuration: String {
     case night = "18:00~21:00"
 }
 
-func deliveryDuration(for integer: Int) -> String {
+func deliveryDurationStr(for integer: Int) -> String {
     switch integer {
     case 0: return DeliveryDuration.morning.rawValue
     case 1: return DeliveryDuration.daytime.rawValue
     case 2: return DeliveryDuration.evening.rawValue
     case 3: return DeliveryDuration.night.rawValue
     default: return ""
+    }
+}
+
+func deliveryDuration(for integer: Int) -> DeliveryDuration {
+    switch integer {
+    case 0: return .morning
+    case 1: return .daytime
+    case 2: return .evening
+    case 3: return .night
+    default: return .morning
     }
 }
 

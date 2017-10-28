@@ -127,6 +127,14 @@
                                     <outlet property="delegate" destination="ZZB-Qw-TFe" id="Hzp-cd-eu8"/>
                                 </connections>
                             </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wne-TA-X0O">
+                                <rect key="frame" x="277" y="504" width="82" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="変更する"/>
+                                <connections>
+                                    <action selector="changeDate" destination="ZZB-Qw-TFe" eventType="touchUpInside" id="3Bc-zW-Wx0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -143,6 +151,8 @@
                             <constraint firstItem="FoL-oS-6nO" firstAttribute="top" secondItem="pVl-of-XbF" secondAttribute="bottom" constant="16" id="TXf-hc-YPy"/>
                             <constraint firstItem="aEl-Ic-oqr" firstAttribute="trailing" secondItem="FoL-oS-6nO" secondAttribute="trailing" constant="16" id="ays-19-Pxc"/>
                             <constraint firstItem="tka-kP-F0b" firstAttribute="top" secondItem="237-Gv-o2R" secondAttribute="bottom" constant="4" id="cWg-j2-muR"/>
+                            <constraint firstItem="aEl-Ic-oqr" firstAttribute="trailing" secondItem="Wne-TA-X0O" secondAttribute="trailing" constant="16" id="dHf-Rm-DZo"/>
+                            <constraint firstItem="Wne-TA-X0O" firstAttribute="top" secondItem="XDo-fA-xiq" secondAttribute="bottom" constant="8" id="dJd-Lf-FWh"/>
                             <constraint firstItem="aEl-Ic-oqr" firstAttribute="trailing" secondItem="237-Gv-o2R" secondAttribute="trailing" constant="16" id="edr-Rs-xen"/>
                             <constraint firstItem="XDo-fA-xiq" firstAttribute="top" secondItem="FoL-oS-6nO" secondAttribute="bottom" constant="4" id="fQZ-U6-Xkb"/>
                             <constraint firstItem="Bfr-xb-1TN" firstAttribute="top" secondItem="tka-kP-F0b" secondAttribute="bottom" constant="16" id="ljt-am-l0H"/>

@@ -20,18 +20,24 @@ class DeliveryDetailViewController: UIViewController {
         }
         return dates
     }
+    lazy var shownDate = delivery?.date
+    lazy var shownRewards = rewards(for: shownDate?.weekday() ?? 1)
 
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var dateLabel: UILabel!
     @IBOutlet private weak var statusLabel: UILabel!
     @IBOutlet private weak var datePickerView: UIPickerView!
 
+    @IBAction private func changeDate() {
+        
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         nameLabel.text = delivery?.name
         statusLabel.text = delivery?.status
-        guard let date = delivery?.date, let duration = delivery?.duration else { return }
-        dateLabel.text = date.toString() + " " + duration
+        guard let date = delivery?.date, let durationStr = delivery?.durationStr else { return }
+        dateLabel.text = date.toString() + date.weekdayStr() + " " + durationStr
     }
 
 }
@@ -52,10 +58,21 @@ extension DeliveryDetailViewController: UIPickerViewDataSource, UIPickerViewDele
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         switch component {
-        case 0: return dates[row].toShortString()
-        case 1: return allDeliveryDurations()[row]
+        case 0: return dates[row].toShortString() + dates[row].weekdayStr()
+        case 1: return allDeliveryDurations()[row] + " +" + String(shownRewards[row]) + "円"
         default: return nil
         }
+    }
+
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        guard component == 0 else { return }
+        shownRewards = rewards(for: dates[row].weekday())
+        pickerView.reloadComponent(1)
+    }
+
+    func pickerView(_ pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
+        if component == 0 { return 110 }
+        return pickerView.frame.width - 110
     }
 
 }

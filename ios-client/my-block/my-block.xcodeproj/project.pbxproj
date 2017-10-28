@@ -21,7 +21,8 @@
 		57E1ABEA1FA434C4000CB949 /* DeliveryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E1ABE91FA434C4000CB949 /* DeliveryDetailViewController.swift */; };
 		57E1ABED1FA46909000CB949 /* DeliveryStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E1ABEC1FA46909000CB949 /* DeliveryStatus.swift */; };
 		57E1ABEF1FA46CAD000CB949 /* DeliveryDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E1ABEE1FA46CAD000CB949 /* DeliveryDuration.swift */; };
-		57E1ABF11FA47485000CB949 /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E1ABF01FA47485000CB949 /* Date+String.swift */; };
+		57E1ABF11FA47485000CB949 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E1ABF01FA47485000CB949 /* Date+Extension.swift */; };
+		57E1ABF31FA4878F000CB949 /* DeliveryReward.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E1ABF21FA4878F000CB949 /* DeliveryReward.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +42,8 @@
 		57E1ABE91FA434C4000CB949 /* DeliveryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryDetailViewController.swift; sourceTree = "<group>"; };
 		57E1ABEC1FA46909000CB949 /* DeliveryStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryStatus.swift; sourceTree = "<group>"; };
 		57E1ABEE1FA46CAD000CB949 /* DeliveryDuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryDuration.swift; sourceTree = "<group>"; };
-		57E1ABF01FA47485000CB949 /* Date+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+String.swift"; sourceTree = "<group>"; };
+		57E1ABF01FA47485000CB949 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		57E1ABF21FA4878F000CB949 /* DeliveryReward.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryReward.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +123,8 @@
 			children = (
 				57E1ABEC1FA46909000CB949 /* DeliveryStatus.swift */,
 				57E1ABEE1FA46CAD000CB949 /* DeliveryDuration.swift */,
-				57E1ABF01FA47485000CB949 /* Date+String.swift */,
+				57E1ABF01FA47485000CB949 /* Date+Extension.swift */,
+				57E1ABF21FA4878F000CB949 /* DeliveryReward.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -201,12 +204,13 @@
 				57E1ABDB1FA428BC000CB949 /* DeliveryListViewController.swift in Sources */,
 				57E1ABE81FA42DA9000CB949 /* APIEndpoint.swift in Sources */,
 				57E1ABCE1FA427E4000CB949 /* my_block.xcdatamodeld in Sources */,
+				57E1ABF31FA4878F000CB949 /* DeliveryReward.swift in Sources */,
 				57E1ABED1FA46909000CB949 /* DeliveryStatus.swift in Sources */,
 				57E1ABE61FA42D73000CB949 /* MyBlockEndpoint.swift in Sources */,
 				57E1ABE41FA42D36000CB949 /* GetDeliveriesService.swift in Sources */,
 				57E1ABC61FA427E4000CB949 /* AppDelegate.swift in Sources */,
 				57E1ABEA1FA434C4000CB949 /* DeliveryDetailViewController.swift in Sources */,
-				57E1ABF11FA47485000CB949 /* Date+String.swift in Sources */,
+				57E1ABF11FA47485000CB949 /* Date+Extension.swift in Sources */,
 				57E1ABE11FA42B44000CB949 /* JSONObject.swift in Sources */,
 				57E1ABEF1FA46CAD000CB949 /* DeliveryDuration.swift in Sources */,
 				57E1ABDF1FA42AFD000CB949 /* Delivery.swift in Sources */,
