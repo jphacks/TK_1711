@@ -68,6 +68,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="配達一覧" id="F4z-u4-bGx"/>
                     <connections>
+                        <outlet property="balanceLabel" destination="YMF-Ja-wIC" id="HL4-df-RfY"/>
                         <outlet property="deliveryListTableView" destination="uxI-a8-gbY" id="Ujf-h9-BxA"/>
                     </connections>
                 </viewController>

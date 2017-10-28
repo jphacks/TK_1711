@@ -63,6 +63,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		572E9F411FA4BF7800E7C778 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				57E1ABD11FA427E4000CB949 /* LaunchScreen.storyboard */,
+				57E1ABC91FA427E4000CB949 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		57E1ABB91FA427E4000CB949 = {
 			isa = PBXGroup;
 			children = (
@@ -82,14 +91,13 @@
 		57E1ABC41FA427E4000CB949 /* my-block */ = {
 			isa = PBXGroup;
 			children = (
+				572E9F411FA4BF7800E7C778 /* View */,
 				57E1ABEB1FA468E9000CB949 /* Utility */,
 				57E1ABE21FA42D19000CB949 /* Service */,
 				57E1ABDD1FA42AEC000CB949 /* Model */,
 				57E1ABDC1FA428CA000CB949 /* ViewController */,
 				57E1ABC51FA427E4000CB949 /* AppDelegate.swift */,
-				57E1ABC91FA427E4000CB949 /* Main.storyboard */,
 				57E1ABCF1FA427E4000CB949 /* Assets.xcassets */,
-				57E1ABD11FA427E4000CB949 /* LaunchScreen.storyboard */,
 				57E1ABD41FA427E4000CB949 /* Info.plist */,
 				57E1ABCC1FA427E4000CB949 /* my_block.xcdatamodeld */,
 			);
