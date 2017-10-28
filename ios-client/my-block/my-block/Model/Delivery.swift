@@ -11,21 +11,19 @@ import Foundation
 class Delivery: JSONDecodable {
     let id: Int
     let name: String
-    let date: String
+    let date: Date
     let status: String
     let duration: String
 
     required init(json: JSONObject) throws {
-        func dateString(date: String) -> String {
-            let arr = date.split(separator: "-")
-            return arr[0] + "年" + arr[1] + "月" + arr[2] + "日"
-        }
-
         id = try json.get("id")
         name = try json.get("name")
-        date = dateString(date: try json.get("date"))
         status = deliveryStatus(for: try json.get("status"))
         duration = deliveryDuration(for: try json.get("duration"))
+
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "YYYY-mm-dd"
+        date = dateFormatter.date(from: try json.get("date")) ?? Date()
     }
 
 }

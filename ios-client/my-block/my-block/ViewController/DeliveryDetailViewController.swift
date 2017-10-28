@@ -21,7 +21,7 @@ class DeliveryDetailViewController: UIViewController {
         nameLabel.text = delivery?.name
         statusLabel.text = delivery?.status
         guard let date = delivery?.date, let duration = delivery?.duration else { return }
-        dateLabel.text = date + " " + duration
+        dateLabel.text = date.toString() + " " + duration
     }
 
 }
