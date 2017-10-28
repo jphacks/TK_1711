@@ -19,6 +19,9 @@ class DeliveryDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         nameLabel.text = delivery?.name
+        statusLabel.text = delivery?.status
+        guard let date = delivery?.date, let duration = delivery?.duration else { return }
+        dateLabel.text = date + " " + duration
     }
 
 }
