@@ -20,7 +20,7 @@ class DeliveryDetailViewController: UIViewController {
         }
         return dates
     }
-    lazy var shownDate = delivery?.purchasedDate
+    lazy var shownDate = delivery?.deliveryDate
     lazy var shownRewards = rewards(for: shownDate?.weekday() ?? 1)
 
     @IBOutlet private weak var photoImageView: UIImageView!
