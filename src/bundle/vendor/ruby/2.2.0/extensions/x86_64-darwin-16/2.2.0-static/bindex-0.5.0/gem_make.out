@@ -1,0 +1,11 @@
+/Users/KeisukeYamashita/.rbenv/versions/2.2.5/bin/ruby -r ./siteconf20171028-40949-agfr4j.rb extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling cruby.c
+linking shared-object bindex/cruby.bundle
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.bundle ./.gem.20171028-40949-zbss6v/bindex
