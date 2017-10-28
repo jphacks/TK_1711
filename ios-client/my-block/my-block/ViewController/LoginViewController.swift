@@ -40,6 +40,35 @@ class LoginViewController: UIViewController {
         loginButton.layer.cornerRadius = 6
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let n = NotificationCenter.default
+        let nameShow = NSNotification.Name.UIKeyboardWillShow
+        let nameHide = NSNotification.Name.UIKeyboardWillHide
+        n.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: nameShow, object: nil)
+        n.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: nameHide, object: nil)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        let n = NotificationCenter.default
+        n.removeObserver(self)
+    }
+
+    @objc func keyboardWillShow(notification: Notification?) {
+        let rect = (notification?.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
+        UIView.animate(withDuration: 0.25, animations: { () in
+            let transform = CGAffineTransform(translationX: 0, y: -(rect?.size.height)!)
+            self.view.transform = transform
+        })
+    }
+
+    @objc func keyboardWillHide(notification: Notification?) {
+        UIView.animate(withDuration: 0.25, animations: { () in
+            self.view.transform = .identity
+        })
+    }
+
 }
 
 extension LoginViewController: UITextFieldDelegate {
