@@ -20,7 +20,7 @@ class DeliveryTableViewCell: UITableViewCell {
     }
 
     func configure(_ delivery: Delivery) {
-        nameLabel.text = delivery.name
+        nameLabel.text = delivery.name + String(delivery.id)
         dateLabel.text = "配達予定日 " + delivery.deliveryDate.toString() + delivery.deliveryDate.weekdayStr()
         photoImageView.load(from: delivery.photoUrl)
         if delivery.status == .delivered {
