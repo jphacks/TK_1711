@@ -46,19 +46,28 @@
                             </label>
                         </subviews>
                     </stackView>
+                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Ob-NB-zCH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="a1k-7J-gBl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="3ZJ-K6-Jgp"/>
                     <constraint firstAttribute="trailingMargin" secondItem="gXr-Mg-vGl" secondAttribute="trailing" constant="8" id="Gf1-NB-OFd"/>
                     <constraint firstAttribute="bottomMargin" secondItem="gXr-Mg-vGl" secondAttribute="bottom" id="SVN-7h-HGa"/>
                     <constraint firstItem="gXr-Mg-vGl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="UA6-lS-Ckv"/>
+                    <constraint firstAttribute="bottom" secondItem="8Ob-NB-zCH" secondAttribute="bottom" id="an8-T1-5iB"/>
+                    <constraint firstAttribute="trailing" secondItem="8Ob-NB-zCH" secondAttribute="trailing" id="bP0-qj-dGs"/>
                     <constraint firstAttribute="bottomMargin" secondItem="a1k-7J-gBl" secondAttribute="bottom" id="gbQ-dI-O6i"/>
                     <constraint firstItem="a1k-7J-gBl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="gtQ-LB-hLV"/>
+                    <constraint firstItem="8Ob-NB-zCH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="iQK-V6-fWY"/>
                     <constraint firstItem="gXr-Mg-vGl" firstAttribute="leading" secondItem="a1k-7J-gBl" secondAttribute="trailing" constant="16" id="ph7-gY-tIP"/>
+                    <constraint firstItem="8Ob-NB-zCH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="tD4-kA-hjm"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="coverView" destination="8Ob-NB-zCH" id="p3z-dg-f7e"/>
                 <outlet property="dateLabel" destination="jqa-E2-dpa" id="Yek-fG-dHD"/>
                 <outlet property="nameLabel" destination="rgQ-ZE-d0e" id="hJk-KM-5dE"/>
                 <outlet property="photoImageView" destination="a1k-7J-gBl" id="8d6-3K-pye"/>

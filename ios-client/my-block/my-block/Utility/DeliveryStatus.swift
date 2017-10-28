@@ -14,11 +14,20 @@ enum DeliveryStatus: String {
     case delivered = "配送済"
 }
 
-func deliveryStatus(for integer: Int) -> String {
+func deliveryStatusStr(for integer: Int) -> String {
     switch integer {
     case 0: return DeliveryStatus.notShipped.rawValue
     case 1: return DeliveryStatus.shipping.rawValue
     case 2: return DeliveryStatus.delivered.rawValue
     default: return ""
+    }
+}
+
+func deliveryStatus(for integer: Int) -> DeliveryStatus {
+    switch integer {
+    case 0: return .notShipped
+    case 1: return .shipping
+    case 2: return .delivered
+    default: return .notShipped
     }
 }
