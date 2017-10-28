@@ -31,7 +31,7 @@ class Delivery: JSONDecodable {
         let dateFormatter = DateFormatter()
         dateFormatter.timeZone = TimeZone(identifier: "GMT")
         dateFormatter.dateFormat = "YYYY-MM-dd"
-        purchasedDate = dateFormatter.date(from: try json.get("purchased_date")) ?? Date()
+        purchasedDate = dateFormatter.date(from: try json.get("purchase_date")) ?? Date()
         deliveryDate = dateFormatter.date(from: try json.get("delivery_date")) ?? Date()
     }
 
