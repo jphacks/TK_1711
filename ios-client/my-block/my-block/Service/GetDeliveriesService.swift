@@ -22,8 +22,10 @@ struct GetDeliveriesService: MyBlockEndpoint {
 
 struct GetDeliveriesResult: JSONDecodable {
     let deliveries: [Delivery]
+    let balance: Int
 
     init(json: JSONObject) throws {
-        self.deliveries = try json.get("container")
+        deliveries = try json.get("container")
+        balance = try json.get("balance")
     }
 }
