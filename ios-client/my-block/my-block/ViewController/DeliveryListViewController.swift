@@ -31,7 +31,8 @@ class DeliveryListViewController: UIViewController {
     }
 
     @objc func getDeliveries() {
-        GetDeliveriesService().request(URLSession.shared) { result in
+        let userId = UserDefaults.standard.integer(forKey: "userId")
+        GetDeliveriesService(id: userId).request(URLSession.shared) { result in
             switch result {
             case .success(let res):
                 DispatchQueue.main.async {

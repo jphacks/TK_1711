@@ -11,6 +11,13 @@ import Foundation
 struct GetDeliveriesService: MyBlockEndpoint {
     var path: String { return "containers" }
     typealias ResponseType = GetDeliveriesResult
+    var query: [String : String]? { return ["id": String(id)] }
+
+    let id: Int
+
+    init(id: Int) {
+        self.id = id
+    }
 }
 
 struct GetDeliveriesResult: JSONDecodable {
