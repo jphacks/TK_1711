@@ -19,9 +19,20 @@ class LoginViewController: UIViewController {
         guard !userId.isEmpty && !password.isEmpty else { return }
         guard let id = Int(userId) else { return }
         UserDefaults.standard.set(id, forKey: "userId")
-        performSegue(withIdentifier: "login", sender: nil)
+        performSegue()
         userIdTextField.text = nil
         passwordTextField.text = nil
+    }
+
+    func performSegue() {
+        performSegue(withIdentifier: "login", sender: nil)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "signup" {
+            let vc = segue.destination as! SignUpViewController
+            vc.onSignUp = performSegue
+        }
     }
 
     override func viewDidLoad() {

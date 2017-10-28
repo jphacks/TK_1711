@@ -32,6 +32,7 @@
 		572E9F701FA4D85600E7C778 /* SF-UI-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 572E9F641FA4D84B00E7C778 /* SF-UI-Display-Semibold.otf */; };
 		572E9F711FA4D85600E7C778 /* SF-UI-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 572E9F611FA4D84A00E7C778 /* SF-UI-Display-Thin.otf */; };
 		572E9F721FA4D85600E7C778 /* SF-UI-Display-Ultralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 572E9F621FA4D84A00E7C778 /* SF-UI-Display-Ultralight.otf */; };
+		572E9F741FA4EEE800E7C778 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572E9F731FA4EEE800E7C778 /* SignUpViewController.swift */; };
 		57E1ABC61FA427E4000CB949 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E1ABC51FA427E4000CB949 /* AppDelegate.swift */; };
 		57E1ABCB1FA427E4000CB949 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57E1ABC91FA427E4000CB949 /* Main.storyboard */; };
 		57E1ABCE1FA427E4000CB949 /* my_block.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 57E1ABCC1FA427E4000CB949 /* my_block.xcdatamodeld */; };
@@ -78,6 +79,7 @@
 		572E9F671FA4D84C00E7C778 /* SF-UI-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Regular.otf"; sourceTree = "<group>"; };
 		572E9F681FA4D84C00E7C778 /* SF-UI-Display-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Heavy.otf"; sourceTree = "<group>"; };
 		572E9F691FA4D84D00E7C778 /* SF-UI-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Bold.otf"; sourceTree = "<group>"; };
+		572E9F731FA4EEE800E7C778 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		57E1ABC21FA427E4000CB949 /* my-block.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "my-block.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57E1ABC51FA427E4000CB949 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57E1ABCA1FA427E4000CB949 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				57E1ABDA1FA428BC000CB949 /* DeliveryListViewController.swift */,
 				57E1ABE91FA434C4000CB949 /* DeliveryDetailViewController.swift */,
 				572E9F3F1FA4A4F800E7C778 /* LoginViewController.swift */,
+				572E9F731FA4EEE800E7C778 /* SignUpViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				572E9F441FA4C13700E7C778 /* DeliveryTableViewCell.swift in Sources */,
 				57E1ABF31FA4878F000CB949 /* DeliveryReward.swift in Sources */,
 				57E1ABED1FA46909000CB949 /* DeliveryStatus.swift in Sources */,
+				572E9F741FA4EEE800E7C778 /* SignUpViewController.swift in Sources */,
 				57E1ABE61FA42D73000CB949 /* MyBlockEndpoint.swift in Sources */,
 				57E1ABE41FA42D36000CB949 /* GetDeliveriesService.swift in Sources */,
 				57E1ABC61FA427E4000CB949 /* AppDelegate.swift in Sources */,

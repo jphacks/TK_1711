@@ -9,11 +9,17 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="SF-UI-Display-Bold.otf">
+            <string>SFUIDisplay-Bold</string>
+        </array>
         <array key="SF-UI-Display-Regular.otf">
             <string>SFUIDisplay-Regular</string>
         </array>
         <array key="SF-UI-Text-Bold.otf">
             <string>SFUIText-Bold</string>
+        </array>
+        <array key="SF-UI-Text-Light.otf">
+            <string>SFUIText-Light</string>
         </array>
     </customFonts>
     <scenes>
@@ -226,7 +232,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nMc-JQ-zzH">
-                                <rect key="frame" x="32" y="145.5" width="311" height="376.5"/>
+                                <rect key="frame" x="32" y="125" width="311" height="417.5"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="dUr-52-7u2">
                                         <rect key="frame" x="0.0" y="0.0" width="311" height="150"/>
@@ -260,9 +266,9 @@
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75H-tg-SmZ">
-                                        <rect key="frame" x="0.0" y="343.5" width="311" height="33"/>
+                                        <rect key="frame" x="0.0" y="343.5" width="311" height="32"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="17"/>
                                         <state key="normal" title="Log in">
                                             <color key="titleColor" red="0.68591469526290894" green="0.31023406982421875" blue="0.64807438850402832" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -270,6 +276,27 @@
                                             <action selector="loginButtonTapped" destination="RnT-Sn-Hfh" eventType="touchUpInside" id="dpd-cZ-Hej"/>
                                         </connections>
                                     </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="ijg-6z-q8T">
+                                        <rect key="frame" x="0.0" y="385.5" width="311" height="32"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="アカウントをお持ちでない方は" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N7D-g0-kkL">
+                                                <rect key="frame" x="0.0" y="0.0" width="238" height="32"/>
+                                                <fontDescription key="fontDescription" name="SFUIText-Light" family="SF UI Text" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="th5-yX-ezr">
+                                                <rect key="frame" x="242" y="0.0" width="69" height="32"/>
+                                                <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="17"/>
+                                                <state key="normal" title="こちら">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="44e-Ic-Ci9" kind="presentation" identifier="signup" id="eds-QH-eHP"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -296,6 +323,87 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IYG-DU-OU7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-996" y="114.69265367316342"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="amE-Na-pgG">
+            <objects>
+                <viewController id="44e-Ic-Ci9" customClass="SignUpViewController" customModule="my_block" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SNx-Q4-SKE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroud" translatesAutoresizingMaskIntoConstraints="NO" id="xbl-C4-Kma">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="MML-51-ini">
+                                <rect key="frame" x="14.5" y="146" width="346" height="375.5"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="m8g-su-ila">
+                                        <rect key="frame" x="0.0" y="0.0" width="346" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="FHy-0B-cRF"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Block" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfJ-1G-se3">
+                                        <rect key="frame" x="0.0" y="160" width="346" height="43.5"/>
+                                        <fontDescription key="fontDescription" name="SFUIText-Bold" family="SF UI Text" pointSize="37"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j7o-0T-2aq">
+                                        <rect key="frame" x="0.0" y="213.5" width="346" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="elW-W4-P1v"/>
+                                        </constraints>
+                                    </view>
+                                    <textField opaque="NO" alpha="0.40000000596046448" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VQj-Io-Yhn">
+                                        <rect key="frame" x="0.0" y="263.5" width="346" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" alpha="0.40000000596046448" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iAq-ZC-CeS">
+                                        <rect key="frame" x="0.0" y="303.5" width="346" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rcC-wA-2nC">
+                                        <rect key="frame" x="0.0" y="343.5" width="346" height="32"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="17"/>
+                                        <state key="normal" title="Sign up">
+                                            <color key="titleColor" red="0.68591469530000004" green="0.31023406980000001" blue="0.64807438849999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="loginButtonTapped" destination="RnT-Sn-Hfh" eventType="touchUpInside" id="zzn-ba-Gh0"/>
+                                            <action selector="signUpButtonTapped" destination="44e-Ic-Ci9" eventType="touchUpInside" id="SnI-Y7-Ypd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xbl-C4-Kma" firstAttribute="top" secondItem="SNx-Q4-SKE" secondAttribute="top" id="BJz-ho-XNB"/>
+                            <constraint firstItem="xbl-C4-Kma" firstAttribute="leading" secondItem="SNx-Q4-SKE" secondAttribute="leading" id="IIk-nN-cDA"/>
+                            <constraint firstItem="xbl-C4-Kma" firstAttribute="bottom" secondItem="s1P-o5-b6l" secondAttribute="bottom" id="UBP-xq-YiS"/>
+                            <constraint firstItem="MML-51-ini" firstAttribute="centerY" secondItem="SNx-Q4-SKE" secondAttribute="centerY" id="l3V-Pb-M5n"/>
+                            <constraint firstItem="MML-51-ini" firstAttribute="centerX" secondItem="SNx-Q4-SKE" secondAttribute="centerX" id="soQ-D4-lW9"/>
+                            <constraint firstItem="s1P-o5-b6l" firstAttribute="trailing" secondItem="xbl-C4-Kma" secondAttribute="trailing" id="uMh-h2-y5Z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="s1P-o5-b6l"/>
+                    </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="iAq-ZC-CeS" id="zdP-hU-qXO"/>
+                        <outlet property="signUpButton" destination="rcC-wA-2nC" id="Gql-IP-oio"/>
+                        <outlet property="userIdTextField" destination="VQj-Io-Yhn" id="XW9-Tg-RNX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bzr-KT-LyC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-996" y="811"/>
         </scene>
     </scenes>
     <resources>
