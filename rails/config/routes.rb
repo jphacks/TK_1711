@@ -6,6 +6,6 @@ Rails.application.routes.draw do
     end
     
     namespace :public do
-        get '/payments', to:'payments#index'
+        resources :payments
     end
 end
