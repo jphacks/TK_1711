@@ -11,17 +11,183 @@
 </head>
 <body>
 
-値段 = 100
-<%= form_for([:public,@payment]) do |f| %>
-  <%= f.label "アドレス(川上：0xe8047fe4612bdaff46ef896cb87fff10a68b52ec)" %>
-  <%= f.text_field :sender%>
+<header id="header"><!--header-->
+  <div class="header_top"><!--header_top-->
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="contactinfo">
+            <ul class="nav nav-pills">
+              <h2>ナビゲーション</h2>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!--/header_top-->
+</header><!--/header-->
 
-  <%= f.label "パスワード(自由)" %>
-  <%= f.password_field "パスワード" %>
+<section>
 
-  <%= f.label "パスワード確認(自由)" %>
-  <%= f.password_field "パスワード確認用" %>
-  <%= f.submit "Buy!", class: "btn btn-large btn-success" %>
-<% end %>
+  <div class="container">
+  <div class="row">
+  <div class="col-sm-3">
+  <div class="left-sidebar">
+  <h2>カテゴリー</h2>
+  <div class="panel-group category-products" id="accordian"><!--category-productsr-->
+  <div class="panel panel-default">
+  <div class="panel-heading">
+  <h4 class="panel-title"><a href="#">食品・飲料・お酒</a></h4>
+  </div>
+  </div>
+  <div class="panel panel-default">
+  <div class="panel-heading">
+  <h4 class="panel-title"><a href="#">家庭用品・キッチン</a></h4>
+  </div>
+  </div>
+  <div class="panel panel-default">
+  <div class="panel-heading">
+  <h4 class="panel-title"><a href="#">ドラッグ用品・美容</a></h4>
+  </div>
+  </div>
+  <div class="panel panel-default">
+  <div class="panel-heading">
+  <h4 class="panel-title"><a href="#">服・シューズ・ファッション</a></h4>
+  </div>
+  </div>
+  <div class="panel panel-default">
+  <div class="panel-heading">
+  <h4 class="panel-title"><a href="#">スポーツ・アウトドア</a></h4>
+  </div>
+  </div>
+  <div class="panel panel-default">
+  <div class="panel-heading">
+  <h4 class="panel-title"><a href="#">おもちゃ・ベビー用品</a></h4>
+  </div>
+  </div>
+  <div class="panel panel-default">
+  <div class="panel-heading">
+  <h4 class="panel-title"><a href="#">図書・雑誌</a></h4>
+  </div>
+  </div>
+  <div class="panel panel-default">
+  <div class="panel-heading">
+  <h4 class="panel-title"><a href="#">パソコン・周辺機器</a></h4>
+  </div>
+  </div>
+  <div class="panel panel-default">
+  <div class="panel-heading">
+  <h4 class="panel-title"><a href="#">家電・カメラ</a></h4>
+  </div>
+  </div>
+  <div class="panel panel-default">
+  <div class="panel-heading">
+  <h4 class="panel-title"><a href="#">DVD・ミュージック・ゲーム</a></h4>
+  </div>
+  </div>
+  </div><!--/category-products-->
+  <div class="single-widget">
+    <h2>サービス</h2>
+    <ul class="nav nav-pills nav-stacked">
+      <li><a href="">サイトマップ</a></li>
+      <li><a href="">お問い合わせ</a></li>
+      <li><a href="">よくあるご質問</a></li>
+      <li><a href="">発送について</a></li>
+      <li><a href="">地域・言語変更</a></li>
+    </ul>
+  </div>
+</div>
+</div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9 padding-righ">
+        <div class="product-details"><!--product-details-->
+          <div class="col-sm-5">
+            <div class="view-product">
+              <h4>商品イメージ</h4><br>
+              <%= image_tag "granora.jpg" %>
+            </div>
+          </div>
+
+          <div class="col-sm-7">
+            <div class="product-information"><!--/product-information-->
+              <%= image_tag "new.jpg" %>
+              <h2>フルーツ グラノーラ</h2>
+              <p>商品ID: 1000001</p>
+              <h4>599 円</h4>
+              <%= image_tag "rating.png" %>
+                <p><b>在庫:</b> あり</p>
+                <p><b>メーカ:</b> カルビー</p>
+                <label>数量　　　　　　：</label>
+                <input type="text" value="1" />
+                <%= form_for([:public,@payment]) do |f| %>
+                  <%= f.label "仮想通貨アドレス：" %>
+<!--：0xe8047fe4612bdaff46ef896cb87fff10a68b52ec)-->
+                  <%= f.text_field :sender%>
+                  <br>
+                  <%= f.label "パスワード　　　：" %>
+                  <%= f.password_field "パスワード" %>
+                  <br>
+                  <%= f.label "パスワード確認　：" %>
+                  <%= f.password_field "パスワード確認用" %>
+                  <%= f.submit "購入する", class: "btn btn-large btn-success" %>
+                <% end %>
+              </span>
+              <br>
+              <%= image_tag "share.png" %>
+            </div><!--/product-information-->
+          </div>
+        </div><!--/product-details-->
+
+        <div class="category-tab shop-details-tab"><!--category-tab-->
+          <div class="col-sm-12">
+            <br>
+            <ul class="nav nav-tabs">
+              <li><a href="#details" data-toggle="tab">詳細</a></li>
+              <li><a href="#companyprofile" data-toggle="tab">会社情報</a></li>
+              <li class="active"><a href="#reviews" data-toggle="tab">レビュー (125)</a></li>
+            </ul>
+          </div>
+            <div class="tab-pane fade active in" id="details" >
+              <div class="col-sm-12">
+                <ul>
+                  <br>
+                  <li><a href=""><i class="fa fa-user"></i>主婦 2017/10/29-12:41 PM</a></li>
+                </ul>
+                <p>忙しい朝でもしっかりと栄養がとれます。 カルビーフルグラは、1食分50gあたりバナナ4本分の食物繊維と、茹でたほうれん草(50g)10食分の鉄分を含み、栄養を手軽に摂れるのが人気のヒミツ。朝食の食塩を見直す食品としても注目されています。 栄養バランスは朝食の見直しから始めましょう。</p>
+                <p><b>あなたのレビューを投稿しませんか？</b></p>
+
+                <form action="#">
+                    <input type="text" placeholder="Your Name"/>
+                    <input type="email" placeholder="Email Address"/>
+                  <textarea name="" ></textarea>
+                  <b>Rating: </b> <img <%= image_tag "rating.png" %>
+                  <button type="button" class="btn btn-default pull-right">
+                    Submit
+                  </button>
+                </form>
+              </div>
+            </div>
+
+          </div>
+        </div><!--/category-tab-->
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="footer"><!--Footer-->
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="row">
+        <p class="pull-left">Copyright © 2013 E-SHOPPER Inc. All rights reserved.
+        Designed by <span><a target="_blank" href="http://www.themeum.com">Themeum</a></span></p>
+      </div>
+    </div>
+  </div>
+</footer><!--/Footer-->
+
 </body>
 </html>
