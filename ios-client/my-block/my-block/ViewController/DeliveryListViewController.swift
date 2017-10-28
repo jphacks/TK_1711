@@ -23,6 +23,7 @@ class DeliveryListViewController: UIViewController {
             balanceLabel.text = "所有金: " + String(balance) + "円"
         }
     }
+    var refreshControl: UIRefreshControl?
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -31,9 +32,9 @@ class DeliveryListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let refreshControl = UIRefreshControl()
-        refreshControl.addTarget(self, action: #selector(getDeliveries), for: .valueChanged)
-        deliveryListTableView.addSubview(refreshControl)
+        refreshControl = UIRefreshControl()
+        refreshControl?.addTarget(self, action: #selector(getDeliveries), for: .valueChanged)
+        deliveryListTableView.addSubview(refreshControl!)
         deliveryListTableView.register(UINib(nibName: "DeliveryTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
     }
 
@@ -45,9 +46,13 @@ class DeliveryListViewController: UIViewController {
                 DispatchQueue.main.async {
                     self.deliveries = res.deliveries
                     self.balance = res.balance
+                    self.refreshControl?.endRefreshing()
                 }
             case .failure(let err):
                 print(err)
+                DispatchQueue.main.async {
+                    self.refreshControl?.endRefreshing()
+                }
             }
         }
     }
@@ -76,6 +81,14 @@ extension DeliveryListViewController: UITableViewDataSource {
         let delivery = deliveries[indexPath.row]
         cell.configure(delivery)
         return cell
+    }
+
+}
+
+extension DeliveryListViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showDetail", sender: nil)
     }
 
 }
