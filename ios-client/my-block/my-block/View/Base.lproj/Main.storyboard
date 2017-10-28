@@ -21,6 +21,9 @@
         <array key="SF-UI-Text-Light.otf">
             <string>SFUIText-Light</string>
         </array>
+        <array key="SF-UI-Text-Regular.otf">
+            <string>SFUIText-Regular</string>
+        </array>
     </customFonts>
     <scenes>
         <!--My Block-->
@@ -108,43 +111,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="商品名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="237-Gv-o2R">
-                                <rect key="frame" x="16" y="80" width="343" height="20.5"/>
+                                <rect key="frame" x="16" y="208" width="343" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tka-kP-F0b">
-                                <rect key="frame" x="32" y="104.5" width="327" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tka-kP-F0b">
+                                <rect key="frame" x="32" y="233" width="311" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="配達予定日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bfr-xb-1TN">
-                                <rect key="frame" x="16" y="150.5" width="343" height="20.5"/>
+                                <rect key="frame" x="16" y="279" width="343" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxl-aE-RNE">
-                                <rect key="frame" x="32" y="175" width="327" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pVl-of-XbF">
-                                <rect key="frame" x="32" y="209" width="327" height="30"/>
+                                <rect key="frame" x="32" y="303.5" width="327" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="配達予定日を変更する" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FoL-oS-6nO">
-                                <rect key="frame" x="16" y="255" width="343" height="20.5"/>
+                                <rect key="frame" x="16" y="349.5" width="343" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="XDo-fA-xiq">
-                                <rect key="frame" x="16" y="280" width="343" height="216"/>
+                                <rect key="frame" x="16" y="374" width="343" height="216"/>
                                 <color key="backgroundColor" red="0.85378707060000003" green="0.86322176399999995" blue="0.85789790639999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="ZZB-Qw-TFe" id="5ct-2B-YbH"/>
@@ -152,7 +149,7 @@
                                 </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wne-TA-X0O">
-                                <rect key="frame" x="277" y="504" width="82" height="36"/>
+                                <rect key="frame" x="277" y="598" width="82" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="変更する">
                                     <color key="titleColor" red="0.68591469530000004" green="0.31023406980000001" blue="0.64807438849999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -161,31 +158,61 @@
                                     <action selector="changeDate" destination="ZZB-Qw-TFe" eventType="touchUpInside" id="3Bc-zW-Wx0"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="HSx-n2-Cfq">
+                                <rect key="frame" x="16" y="72" width="343" height="128"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OLI-fx-pKW">
+                                        <rect key="frame" x="0.0" y="4" width="120" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="8V2-SO-tFD"/>
+                                            <constraint firstAttribute="height" constant="120" id="j1J-Fc-EWM"/>
+                                        </constraints>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Wh-qp-mpg">
+                                        <rect key="frame" x="120" y="0.0" width="223" height="128"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="未発送" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pVl-of-XbF">
+                                                <rect key="frame" x="67" y="46" width="90" height="36"/>
+                                                <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="pVl-of-XbF" firstAttribute="centerX" secondItem="5Wh-qp-mpg" secondAttribute="centerX" id="FUg-wx-iHU"/>
+                                            <constraint firstItem="pVl-of-XbF" firstAttribute="centerY" secondItem="5Wh-qp-mpg" secondAttribute="centerY" id="rRa-Kj-Www"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="237-Gv-o2R" firstAttribute="top" secondItem="HSx-n2-Cfq" secondAttribute="bottom" constant="8" id="2zR-KH-E0g"/>
                             <constraint firstItem="XDo-fA-xiq" firstAttribute="leading" secondItem="aEl-Ic-oqr" secondAttribute="leading" constant="16" id="77c-hb-EKj"/>
+                            <constraint firstItem="aEl-Ic-oqr" firstAttribute="trailing" secondItem="HSx-n2-Cfq" secondAttribute="trailing" constant="16" id="7Gm-u3-xG5"/>
                             <constraint firstItem="lxl-aE-RNE" firstAttribute="leading" secondItem="aEl-Ic-oqr" secondAttribute="leading" constant="32" id="8bL-Au-SzF"/>
                             <constraint firstItem="aEl-Ic-oqr" firstAttribute="trailing" secondItem="Bfr-xb-1TN" secondAttribute="trailing" constant="16" id="BQk-CS-V9c"/>
-                            <constraint firstItem="tka-kP-F0b" firstAttribute="leading" secondItem="aEl-Ic-oqr" secondAttribute="leading" constant="32" id="DQh-pY-8UL"/>
-                            <constraint firstItem="237-Gv-o2R" firstAttribute="top" secondItem="aEl-Ic-oqr" secondAttribute="top" constant="16" id="DfL-gu-saw"/>
                             <constraint firstItem="aEl-Ic-oqr" firstAttribute="trailing" secondItem="lxl-aE-RNE" secondAttribute="trailing" constant="16" id="DhT-rw-Ime"/>
-                            <constraint firstItem="237-Gv-o2R" firstAttribute="leading" secondItem="aEl-Ic-oqr" secondAttribute="leading" constant="16" id="Fbc-S3-aAA"/>
                             <constraint firstItem="lxl-aE-RNE" firstAttribute="top" secondItem="Bfr-xb-1TN" secondAttribute="bottom" constant="4" id="Ggq-oT-6Bq"/>
-                            <constraint firstItem="aEl-Ic-oqr" firstAttribute="trailing" secondItem="pVl-of-XbF" secondAttribute="trailing" constant="16" id="Ich-5u-RfS"/>
-                            <constraint firstItem="aEl-Ic-oqr" firstAttribute="trailing" secondItem="tka-kP-F0b" secondAttribute="trailing" constant="16" id="KUP-yH-vps"/>
-                            <constraint firstItem="FoL-oS-6nO" firstAttribute="top" secondItem="pVl-of-XbF" secondAttribute="bottom" constant="16" id="TXf-hc-YPy"/>
+                            <constraint firstItem="HSx-n2-Cfq" firstAttribute="leading" secondItem="aEl-Ic-oqr" secondAttribute="leading" constant="16" id="KXl-Sn-ahe"/>
+                            <constraint firstItem="aEl-Ic-oqr" firstAttribute="trailing" secondItem="237-Gv-o2R" secondAttribute="trailing" constant="16" id="KtW-cs-ko3"/>
+                            <constraint firstItem="aEl-Ic-oqr" firstAttribute="trailing" secondItem="tka-kP-F0b" secondAttribute="trailing" constant="32" id="O77-Uq-QG7"/>
+                            <constraint firstItem="tka-kP-F0b" firstAttribute="leading" secondItem="aEl-Ic-oqr" secondAttribute="leading" constant="32" id="TWc-rq-IXl"/>
+                            <constraint firstItem="tka-kP-F0b" firstAttribute="top" secondItem="237-Gv-o2R" secondAttribute="bottom" constant="4.5" id="XKD-kv-DnS"/>
+                            <constraint firstItem="FoL-oS-6nO" firstAttribute="top" secondItem="lxl-aE-RNE" secondAttribute="bottom" constant="16" id="YDZ-9h-xDV"/>
+                            <constraint firstItem="aEl-Ic-oqr" firstAttribute="trailing" secondItem="Bfr-xb-1TN" secondAttribute="trailing" constant="16" id="Yv9-j2-6cm"/>
                             <constraint firstItem="aEl-Ic-oqr" firstAttribute="trailing" secondItem="FoL-oS-6nO" secondAttribute="trailing" constant="16" id="ays-19-Pxc"/>
-                            <constraint firstItem="tka-kP-F0b" firstAttribute="top" secondItem="237-Gv-o2R" secondAttribute="bottom" constant="4" id="cWg-j2-muR"/>
+                            <constraint firstItem="HSx-n2-Cfq" firstAttribute="top" secondItem="aEl-Ic-oqr" secondAttribute="top" constant="8" id="bcg-OO-ahK"/>
+                            <constraint firstItem="Bfr-xb-1TN" firstAttribute="leading" secondItem="aEl-Ic-oqr" secondAttribute="leading" constant="16" id="cHl-ai-gLU"/>
                             <constraint firstItem="aEl-Ic-oqr" firstAttribute="trailing" secondItem="Wne-TA-X0O" secondAttribute="trailing" constant="16" id="dHf-Rm-DZo"/>
                             <constraint firstItem="Wne-TA-X0O" firstAttribute="top" secondItem="XDo-fA-xiq" secondAttribute="bottom" constant="8" id="dJd-Lf-FWh"/>
-                            <constraint firstItem="aEl-Ic-oqr" firstAttribute="trailing" secondItem="237-Gv-o2R" secondAttribute="trailing" constant="16" id="edr-Rs-xen"/>
                             <constraint firstItem="XDo-fA-xiq" firstAttribute="top" secondItem="FoL-oS-6nO" secondAttribute="bottom" constant="4" id="fQZ-U6-Xkb"/>
-                            <constraint firstItem="Bfr-xb-1TN" firstAttribute="top" secondItem="tka-kP-F0b" secondAttribute="bottom" constant="16" id="ljt-am-l0H"/>
+                            <constraint firstItem="237-Gv-o2R" firstAttribute="leading" secondItem="aEl-Ic-oqr" secondAttribute="leading" constant="16" id="k4n-qb-Af8"/>
                             <constraint firstItem="FoL-oS-6nO" firstAttribute="leading" secondItem="aEl-Ic-oqr" secondAttribute="leading" constant="16" id="qgE-eO-hfG"/>
                             <constraint firstItem="Bfr-xb-1TN" firstAttribute="leading" secondItem="aEl-Ic-oqr" secondAttribute="leading" constant="16" id="qiR-Hq-hzz"/>
-                            <constraint firstItem="pVl-of-XbF" firstAttribute="leading" secondItem="aEl-Ic-oqr" secondAttribute="leading" constant="32" id="tbp-KD-TBf"/>
-                            <constraint firstItem="pVl-of-XbF" firstAttribute="top" secondItem="lxl-aE-RNE" secondAttribute="bottom" constant="4" id="uNq-dU-SbG"/>
+                            <constraint firstItem="Bfr-xb-1TN" firstAttribute="top" secondItem="tka-kP-F0b" secondAttribute="bottom" constant="16" id="qmh-Cj-Hca"/>
                             <constraint firstItem="aEl-Ic-oqr" firstAttribute="trailing" secondItem="XDo-fA-xiq" secondAttribute="trailing" constant="16" id="yQr-7q-AWw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aEl-Ic-oqr"/>
@@ -194,6 +221,7 @@
                         <outlet property="dateLabel" destination="lxl-aE-RNE" id="EKt-ed-x4b"/>
                         <outlet property="datePickerView" destination="XDo-fA-xiq" id="zfa-gO-zzS"/>
                         <outlet property="nameLabel" destination="tka-kP-F0b" id="Vpl-TV-Q1q"/>
+                        <outlet property="photoImageView" destination="OLI-fx-pKW" id="VKk-Jw-wzF"/>
                         <outlet property="statusLabel" destination="pVl-of-XbF" id="0Kk-16-YZu"/>
                     </connections>
                 </viewController>

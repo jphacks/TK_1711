@@ -23,6 +23,7 @@ class DeliveryDetailViewController: UIViewController {
     lazy var shownDate = delivery?.purchasedDate
     lazy var shownRewards = rewards(for: shownDate?.weekday() ?? 1)
 
+    @IBOutlet private weak var photoImageView: UIImageView!
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var dateLabel: UILabel!
     @IBOutlet private weak var statusLabel: UILabel!
@@ -74,6 +75,7 @@ class DeliveryDetailViewController: UIViewController {
 
     func update() {
         guard let delivery = delivery else { return }
+        photoImageView.load(from: delivery.photoUrl)
         nameLabel.text = delivery.name
         statusLabel.text = delivery.statusStr
         dateLabel.text = delivery.deliveryDate.toString() + delivery.deliveryDate.weekdayStr() + " " + delivery.durationStr
@@ -82,6 +84,16 @@ class DeliveryDetailViewController: UIViewController {
         case .daytime: datePickerView.selectRow(1, inComponent: 1, animated: false)
         case .evening: datePickerView.selectRow(2, inComponent: 1, animated: false)
         case .night: datePickerView.selectRow(3, inComponent: 1, animated: false)
+        }
+        switch delivery.status {
+        case .notShipped:
+            statusLabel.backgroundColor = .gray
+            statusLabel.textColor = .white
+        case .shipping:
+            statusLabel.backgroundColor = .orange
+            statusLabel.textColor = .white
+        case .delivered:
+            statusLabel.backgroundColor = .green
         }
         guard let days = Calendar.current.dateComponents([.day], from: delivery.purchasedDate, to: delivery.deliveryDate).day else { return }
         datePickerView.selectRow(days, inComponent: 0, animated: false)
