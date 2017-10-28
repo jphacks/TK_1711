@@ -24,10 +24,14 @@ class Api::V1::ContainersController < Api::V1::BaseController
         @container.delivery_date = delivery_date
         @container.duration = duration
 
+        p @container
+
         if @container.status == 2
             # そもそも2だったらスルー
-        elsif params[:status] == 2
+            puts "Alreadly 2"
+        elsif params[:status].to_i == 2
             # ２じゃなかったけど、これから2になるやつ
+            puts "Torihiki"
             @payment = @container.payment
 
             sender_addr = @payment.sender
@@ -36,6 +40,7 @@ class Api::V1::ContainersController < Api::V1::BaseController
 
             @sender = User.find_by(address:sender_addr)
             @shop = User.find_by(address:shop_addr)
+
             fee = mount*0.01
             @sender.balance -= mount*0.99
             @shop.balance += mount*0.99
@@ -44,9 +49,10 @@ class Api::V1::ContainersController < Api::V1::BaseController
             @company.save
             @sender.save
             @shop.save
-
+            
         else
             # 2じゃなかったし、これから2にもならないやつ
+            puts "Nothing"
         end 
 
         @container.status = ( params[:status].nil? ?  @container.status : params[:status])
