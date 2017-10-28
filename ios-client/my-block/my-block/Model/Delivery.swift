@@ -22,7 +22,7 @@ class Delivery: JSONDecodable {
         duration = deliveryDuration(for: try json.get("duration"))
 
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "YYYY-mm-dd"
+        dateFormatter.dateFormat = "YYYY-MM-dd"
         date = dateFormatter.date(from: try json.get("date")) ?? Date()
     }
 
