@@ -10,6 +10,7 @@ import UIKit
 
 class DeliveryListViewController: UIViewController {
 
+    @IBOutlet private weak var balanceLabel: UILabel!
     @IBOutlet private weak var deliveryListTableView: UITableView!
 
     private var deliveries: [Delivery] = [] {
@@ -17,7 +18,11 @@ class DeliveryListViewController: UIViewController {
             deliveryListTableView.reloadData()
         }
     }
-    private var balance: Int = 0
+    private var balance: Int = 0 {
+        didSet {
+            balanceLabel.text = "所有金: " + String(balance) + "円"
+        }
+    }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -29,6 +34,7 @@ class DeliveryListViewController: UIViewController {
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(getDeliveries), for: .valueChanged)
         deliveryListTableView.addSubview(refreshControl)
+        deliveryListTableView.register(UINib(nibName: "DeliveryTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
     }
 
     @objc func getDeliveries() {
@@ -66,8 +72,9 @@ extension DeliveryListViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = deliveryListTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = deliveries[indexPath.row].name
+        let cell = deliveryListTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! DeliveryTableViewCell
+        let delivery = deliveries[indexPath.row]
+        cell.configure(delivery)
         return cell
     }
 
