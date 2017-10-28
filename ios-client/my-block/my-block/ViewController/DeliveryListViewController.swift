@@ -52,7 +52,9 @@ class DeliveryListViewController: UIViewController {
             switch result {
             case .success(let res):
                 DispatchQueue.main.async {
-                    self.deliveries = res.deliveries
+                    self.deliveries = res.deliveries.sorted(by: { (d1, d2) -> Bool in
+                        return d1.status != .delivered
+                    })
                     self.balance = res.balance
                     self.refreshControl?.endRefreshing()
                 }
