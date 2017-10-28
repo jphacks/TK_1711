@@ -36,10 +36,15 @@ class Api::V1::ContainersController < Api::V1::BaseController
 
             @sender = User.find_by(address:sender_addr)
             @shop = User.find_by(address:shop_addr)
-            @sender.balance -= mount
-            @shop.balance += mount 
+            fee = mount*0.01
+            @sender.balance -= mount*0.99
+            @shop.balance += mount*0.99
+            @company = User.find_by(address:"0x44fed900d34cde7a9ce819c08f4a2ad6088266eb")
+            @company.balance += fee
+            @company.save
             @sender.save
             @shop.save
+
         else
             # 2じゃなかったし、これから2にもならないやつ
         end 

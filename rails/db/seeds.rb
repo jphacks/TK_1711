@@ -16,12 +16,12 @@
 
 duration = rand(0..3)
 status = rand(0..2)
-user1 = User.create(name:"川上",address:"0xe8047fe4612bdaff46ef896cb87fff10a68b52ec", balance:1000)
+user1 = User.create(name:"川上",address:"0xe8047fe4612bdaff46ef896cb87fff10a68b52ec", balance:5000)
 containers1 = user1.containers.create(name:"ソファ",delivery_date:"2017-10-20",purchase_date:"2017-10-20",photo:"https://s3-ap-northeast-1.amazonaws.com/myblock/sofa.jpg",duration:duration,status:status)
 duration = rand(0..3)
 status = rand(0..2)
 
-user2 = User.create(name:"山田",address:"0x21ab4b628bd3af3bcfa38d18cf8de3d243026956",balance:3000)
+user2 = User.create(name:"山田",address:"0x21ab4b628bd3af3bcfa38d18cf8de3d243026956",balance:8000)
 for num in 1..5 do
     containers2 = user2.containers.create(name:"グラノーラ",delivery_date:"2017-10-20",purchase_date:"2017-10-20",photo:"https://s3-ap-northeast-1.amazonaws.com/myblock/gura.png",duration:duration,status:status)
 end
@@ -34,7 +34,7 @@ containers2 = user2.containers.create(name:"ソファ",delivery_date:"2017-10-20
 
 duration = rand(0..3)
 status = rand(0..2)
-user3 = User.create(name:"林",address:"0x786971589e24ca1d42ba813c0bd26936081b2085",balance:3502)
+user3 = User.create(name:"林",address:"0x786971589e24ca1d42ba813c0bd26936081b2085",balance:9000)
 containers3 = user3.containers.create(name:"プロテイン",delivery_date:"2017-10-20",purchase_date:"2017-10-20",photo:"https://s3-ap-northeast-1.amazonaws.com/myblock/protain.png",duration:duration,status:status)
 
 duration = rand(0..3)
@@ -44,7 +44,11 @@ containers4 = user4.containers.create(name:"7up",delivery_date:"2017-10-20", pur
 duration = rand(0..3)
 status = rand(0..2)
 
-user5 = User.create(name:"島根牧場",address:"0xc90b4266ac60846f20aade24978a57f60e4a81ba",balance:7000)
+user5 = User.create(name:"島根牧場",address:"0xc90b4266ac60846f20aade24978a57f60e4a81ba",balance:10000)
 for num in 1..5 do
     containers5 = user5.containers.create(name:"カップ麺詰め替えセット", delivery_date:"2017-10-20", purchase_date:"2017-10-20",photo:"https://s3-ap-northeast-1.amazonaws.com/myblock/cupmen.jpg",duration:duration,status:status)
 end
+
+
+
+user5 = User.create(name:"MyBlockシステムズ",address:"0x44fed900d34cde7a9ce819c08f4a2ad6088266eb",balance:1000000)
