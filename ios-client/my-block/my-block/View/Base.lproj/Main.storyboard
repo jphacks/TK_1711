@@ -28,9 +28,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="ZZB-Qw-TFe" kind="show" id="OcZ-Hl-FGd"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
@@ -61,6 +58,7 @@
                     <connections>
                         <outlet property="balanceLabel" destination="YMF-Ja-wIC" id="HL4-df-RfY"/>
                         <outlet property="deliveryListTableView" destination="uxI-a8-gbY" id="Ujf-h9-BxA"/>
+                        <segue destination="ZZB-Qw-TFe" kind="show" identifier="showDetail" id="RbL-2m-CYM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
