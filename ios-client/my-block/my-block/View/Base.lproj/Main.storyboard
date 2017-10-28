@@ -14,7 +14,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--配達一覧-->
+        <!--My Block-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="DeliveryListViewController" customModule="my_block" customModuleProvider="target" sceneMemberID="viewController">
@@ -59,8 +59,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="配達一覧" id="F4z-u4-bGx">
+                    <navigationItem key="navigationItem" title="My Block" id="F4z-u4-bGx">
                         <barButtonItem key="rightBarButtonItem" title="ログアウト" id="EKo-2T-jfp">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="logoutButtonTapped" destination="BYZ-38-t0r" id="3mG-yg-4mr"/>
                             </connections>
@@ -131,7 +132,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wne-TA-X0O">
                                 <rect key="frame" x="277" y="504" width="82" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="変更する"/>
+                                <state key="normal" title="変更する">
+                                    <color key="titleColor" red="0.68591469530000004" green="0.31023406980000001" blue="0.64807438849999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="changeDate" destination="ZZB-Qw-TFe" eventType="touchUpInside" id="3Bc-zW-Wx0"/>
                                 </connections>
@@ -184,6 +187,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1M8-Gn-zke">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.91377365589141846" green="0.26286444067955017" blue="0.42487901449203491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -206,7 +210,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nMc-JQ-zzH">
-                                <rect key="frame" x="32" y="145" width="311" height="377.5"/>
+                                <rect key="frame" x="32" y="145.5" width="311" height="376.5"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="dUr-52-7u2">
                                         <rect key="frame" x="0.0" y="0.0" width="311" height="150"/>
@@ -215,36 +219,36 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Block" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0B-er-X0B">
-                                        <rect key="frame" x="0.0" y="160" width="311" height="44.5"/>
+                                        <rect key="frame" x="0.0" y="160" width="311" height="43.5"/>
                                         <fontDescription key="fontDescription" name="SFUIText-Bold" family="SF UI Text" pointSize="37"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d5g-bV-uf7">
-                                        <rect key="frame" x="0.0" y="214.5" width="311" height="40"/>
+                                        <rect key="frame" x="0.0" y="213.5" width="311" height="40"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="sQT-T8-Rn0"/>
                                         </constraints>
                                     </view>
                                     <textField opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gwn-5Z-mIZ">
-                                        <rect key="frame" x="0.0" y="264.5" width="311" height="30"/>
+                                        <rect key="frame" x="0.0" y="263.5" width="311" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xJB-l3-RiX">
-                                        <rect key="frame" x="0.0" y="304.5" width="311" height="30"/>
+                                        <rect key="frame" x="0.0" y="303.5" width="311" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75H-tg-SmZ">
-                                        <rect key="frame" x="0.0" y="344.5" width="311" height="33"/>
+                                        <rect key="frame" x="0.0" y="343.5" width="311" height="33"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="Log in">
-                                            <color key="titleColor" red="0.80371278524398804" green="0.29644346237182617" blue="0.55772703886032104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" red="0.68591469526290894" green="0.31023406982421875" blue="0.64807438850402832" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="loginButtonTapped" destination="RnT-Sn-Hfh" eventType="touchUpInside" id="dpd-cZ-Hej"/>
