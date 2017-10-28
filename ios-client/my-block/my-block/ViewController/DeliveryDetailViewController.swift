@@ -13,6 +13,8 @@ class DeliveryDetailViewController: UIViewController {
     var delivery: Delivery?
 
     @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var dateLabel: UILabel!
+    @IBOutlet private weak var statusLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()

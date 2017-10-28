@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		57E1ABC61FA427E4000CB949 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E1ABC51FA427E4000CB949 /* AppDelegate.swift */; };
-		57E1ABC81FA427E4000CB949 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E1ABC71FA427E4000CB949 /* ViewController.swift */; };
 		57E1ABCB1FA427E4000CB949 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57E1ABC91FA427E4000CB949 /* Main.storyboard */; };
 		57E1ABCE1FA427E4000CB949 /* my_block.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 57E1ABCC1FA427E4000CB949 /* my_block.xcdatamodeld */; };
 		57E1ABD01FA427E4000CB949 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57E1ABCF1FA427E4000CB949 /* Assets.xcassets */; };
@@ -25,7 +24,6 @@
 /* Begin PBXFileReference section */
 		57E1ABC21FA427E4000CB949 /* my-block.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "my-block.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57E1ABC51FA427E4000CB949 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		57E1ABC71FA427E4000CB949 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		57E1ABCA1FA427E4000CB949 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		57E1ABCD1FA427E4000CB949 /* my_block.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = my_block.xcdatamodel; sourceTree = "<group>"; };
 		57E1ABCF1FA427E4000CB949 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -87,7 +85,6 @@
 			isa = PBXGroup;
 			children = (
 				57E1ABDA1FA428BC000CB949 /* DeliveryListViewController.swift */,
-				57E1ABC71FA427E4000CB949 /* ViewController.swift */,
 				57E1ABE91FA434C4000CB949 /* DeliveryDetailViewController.swift */,
 			);
 			path = ViewController;
@@ -189,7 +186,6 @@
 				57E1ABCE1FA427E4000CB949 /* my_block.xcdatamodeld in Sources */,
 				57E1ABE61FA42D73000CB949 /* MyBlockEndpoint.swift in Sources */,
 				57E1ABE41FA42D36000CB949 /* GetDeliveriesService.swift in Sources */,
-				57E1ABC81FA427E4000CB949 /* ViewController.swift in Sources */,
 				57E1ABC61FA427E4000CB949 /* AppDelegate.swift in Sources */,
 				57E1ABEA1FA434C4000CB949 /* DeliveryDetailViewController.swift in Sources */,
 				57E1ABE11FA42B44000CB949 /* JSONObject.swift in Sources */,
