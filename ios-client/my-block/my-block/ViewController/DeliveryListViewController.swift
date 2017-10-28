@@ -20,7 +20,7 @@ class DeliveryListViewController: UIViewController {
     }
     private var balance: Int = 0 {
         didSet {
-            balanceLabel.text = "所有金: " + String(balance) + "円"
+            balanceLabel.text = "所有金 " + String(balance) + "円"
         }
     }
     var refreshControl: UIRefreshControl?
