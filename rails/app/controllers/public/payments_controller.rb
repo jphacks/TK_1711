@@ -1,5 +1,6 @@
-class Public::StoresController < Public::BaseController
+class Public::PaymentsController < Public::BaseController
     def index
+        @payment = Payment.new
     end
 
     def new

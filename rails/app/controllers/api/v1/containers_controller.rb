@@ -26,12 +26,11 @@ class Api::V1::ContainersController < Api::V1::BaseController
         @container.status = status
 
         if @container.save
-            p "Update"
+            render :json => @container.to_json
         else
-            p "Failed"
+            error = {error:"error"}
+            render :json => error.to_json
         end
-        error = {hello:0}
-        render :json => error.to_json
     end
     
     def new

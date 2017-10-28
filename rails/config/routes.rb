@@ -6,6 +6,6 @@ Rails.application.routes.draw do
     end
     
     namespace :public do
-        get '/store', to:'stores#index'
+        get '/payments', to:'payments#index'
     end
 end
