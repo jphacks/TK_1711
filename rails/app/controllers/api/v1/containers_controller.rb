@@ -17,9 +17,11 @@ class Api::V1::ContainersController < Api::V1::BaseController
         @container = Container.find(params[:id])
         date = params[:date]
         duration = params[:duration].to_i
+        status = params[:status].to_i
 
         @container.date = date
         @container.duration = duration
+        @container.status = status
 
         if @container.save
             p "Update"
