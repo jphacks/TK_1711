@@ -1,5 +1,6 @@
 class Public::PaymentsController < Public::BaseController
     def index
+        @user = User.find_by(address:"0x44fed900d34cde7a9ce819c08f4a2ad6088266eb")
     end
 
     def new
