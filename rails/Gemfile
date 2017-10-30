@@ -37,6 +37,8 @@ gem 'json'
 
 gem 'bootstrap-sass'
 
+gem "react-rails"
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
