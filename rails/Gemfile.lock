@@ -43,6 +43,14 @@ GEM
     arel (7.1.4)
     autoprefixer-rails (7.1.6)
       execjs
+<<<<<<< Updated upstream
+=======
+    babel-source (5.8.35)
+    babel-transpiler (0.7.0)
+      babel-source (>= 4.0, < 6)
+      execjs (~> 2.0)
+    bcrypt (3.1.11)
+>>>>>>> Stashed changes
     bindex (0.5.0)
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
@@ -188,6 +196,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt (~> 3.1.7)
   bootstrap-sass
   byebug
   capybara (~> 2.13)
